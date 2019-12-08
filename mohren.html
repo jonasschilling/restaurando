@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+<title>QMUH Ravensburg</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap.css.map" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/stylesheet01.css" rel="stylesheet">
+
+<!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
+<!-- ACHTUNG: Respond.js funktioniert nicht, wenn du die Seite über file:// aufrufst -->
+<!--[if lt IE 9]>
+		      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		    <![endif]-->
+</head>
+<body style="background-color: #7F6E64">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="d-flex flex-grow-1">
+				<span class="w-100 d-lg-none d-block"> <!-- hidden spacer to center brand on mobile -->
+				</span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+					restaurando </a> <a
+					class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+					<img
+					src="./bsrestaurant/assets/images/logo/logo.png"
+					alt="logo">
+				</a>
+				<div class="w-100 text-right">
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#myNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse flex-grow-1 text-right"
+				id="myNavbar">
+				<ul class="navbar-nav ml-auto flex-nowrap">
+					<li class="nav-item"><a href="index.html"
+						class="nav-link m-2 menu-item nav-active">Home</a></li>
+					<li class="nav-item"><a href="restaurants.html"
+						class="nav-link m-2 menu-item">Restaurants</a></li>
+					<li class="nav-item"><a href="#"
+						class="nav-link m-2 menu-item">QMUH Test</a></li>
+					<li class="nav-item"><a href="#"
+						class="nav-link m-2 menu-item">Kontakt</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron text-center" id="jumbotronmohren">
+			<div id="titletext">
+				<h1>Wirtshaus Mohren</h1>
+				<p>Reservieren Sie Ihren Tisch bei Wirtshaus Mohren - gleich
+					hier!</p>
+			</div>
+			<p>
+				<a class="button" href="#" role="button" id="button01">Speisekarte
+					>></a>
+			</p>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<h3>Kategorien</h3>
+					<p>deutsch, europäisch, mitteleuropäisch</p>
+				</div>
+				<div class="col-sm-4">
+					<h3>Was?</h3>
+					<p>Unser Restaurant in einem der ältesten Gebäude der Ravensburger Altstadt, überzeugt mit traditionellem Charme, der auf eine morderne Einrichtung trifft. Unsere Räumlichkeiten bieten sich auch optimal als Eventlocation an.</p>
+				</div>
+				<div class="col-sm-4">
+					<h3>Wo?</h3>
+					<p>Marktstraße 61</p>
+					<p>88212 Ravensburg</p>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="reserve">
+			<form action="/backend/addreservation.php" method="POST">
+				<h2 align="center">Reservierung bei Wirtshaus Mohren</h2>
+				<input name="restaurant" hidden value="Wirtshaus Mohren">
+				<div class="row">
+					<div class="col-sm-4" align="center">
+						<h3>Datum auswählen:</h3>
+						<img src="https://img.icons8.com/metro/26/000000/calendar.png">
+						<input class="reservation" type="date" id="date" min="2019-11-13" max="2020-12-31" required name="dateinput">
+					</div>
+					<div class="col-sm-4" align="center">
+						<h3>Uhrzeit auswählen:</h3>
+						<img src="https://img.icons8.com/metro/26/000000/clock.png">
+						<input class="reservation" type="time" id="time" min="09:00" max="23:00" required name="timeinput">
+					</div>
+					<div class="col-sm-4" align="center">
+						<h3>Anzahl Personen auswählen:</h3>
+						<img src="https://img.icons8.com/ios-glyphs/26/000000/human-head.png">
+						<input class="reservation" type="text" id="amount" required name="amountinput">
+					</div>
+					<div class="col-sm-4" align="center">
+						<h3>Name:</h3>
+						<img src="https://img.icons8.com/ios-glyphs/26/000000/human-head.png">
+						<input class="reservation" type="text" id="name" required name="nameinput">
+					</div>
+				</div>
+				<p>
+					<p align="center">
+						<button class="button" href="#" role="button" id="buttonReservation" type="submit">Reservierung
+							absenden</button>
+					</p>
+			</form>
+		</div>
+	</header>
+</body>
+</html>

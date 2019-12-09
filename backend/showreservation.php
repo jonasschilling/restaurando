@@ -20,7 +20,7 @@
 		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 		.tg .tg-il3a{color:#ffffff;border-color:#ffffff;text-align:left;vertical-align:top}
 		</style>
-		<a type="button" class="button" href="../index.html"><< zurück</a>
+		<a type="button" class="button" href="../index.html"><< zur&uuml;ck</a>
 		<div align="center">
 			<h1 style="color:#ffffff;">Alle Reservierungen</h1>
 			<br>

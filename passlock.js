@@ -1,7 +1,7 @@
 function passWord() {
 	var testV = 1;
 	var pass1 = prompt('Bitte Passwort eingeben', ' ');
-	while (testV < 3) {
+	while (testV == 1) {
 		if (pass1 == "letmein") {
 			alert('Richtig!');
 			window.open('admin.html');

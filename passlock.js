@@ -4,7 +4,7 @@ function passWord() {
 	while (testV == 1) {
 		if (pass1 == "letmein") {
 			alert('Richtig!');
-			window.open('admin.html');
+			window.open('showreservation.php');
 			break;
 		}
 		testV += 1;

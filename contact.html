@@ -62,16 +62,16 @@
 					kontaktieren!</p>
 			</div>
 		</div>
-
-		<h3>Contact Form</h3>
 		<div class="container">
+			<h2 align="center">Contact Form</h2>
 			<form action="action_page.php">
-				<label for="type">Bitte Auswählen</label> <select id="type"
-					name="type" onchange="onChange()">
-					<option value="0">Bitte Auswählen</option>
-					<option value="1">Kunde</option>
-					<option value="2">Restaurantbesitzer</option>
-				</select>
+				<div class="select">
+					<select id="type" name="type" onchange="onChange()">
+						<option value="0">Bitte Auswählen</option>
+						<option value="1">Kunde</option>
+						<option value="2">Restaurantbesitzer</option>
+					</select>
+				</div>
 				<script>
 					function onChange() {
 						if (document.getElementById("type").value == 2) {
@@ -105,27 +105,27 @@
 					id="restAdressLabel" for="restAdress">Restaurantadresse</label> <input
 					type="text" id="restAdress" name="restAdress"
 					placeholder="Adresse Ihres Restaurants..">
-					<div class="column"  style="padding: 10px">
-						<div class="row-sm-2">
-							<label id="german" class="switch"> <input type="checkbox">
-								<span class="slider round"></span>Deutsch
-							</label>
-						</div>
-						<div class="row-sm-2">
-							<label id="american" class="switch"> <input
-								type="checkbox"> <span class="slider round"></span>Amerikanisch
-							</label>
-						</div>
-						<div class="row-sm-2">
-							<label id="spanish" class="switch"> <input
-								type="checkbox"> <span class="slider round"></span>Spanisch
-							</label>
-						</div>
-						<div class="row-sm-2">
-							<label id="other" class="switch"> <input type="checkbox">
-								<span class="slider round"></span>Andere
-							</label>
-						</div>
+				<div class="column" style="padding: 10px">
+					<div class="row-sm-2">
+						<label id="german" class="switch"> <input type="checkbox">
+							<span class="slider round"></span>Deutsch
+						</label>
+					</div>
+					<div class="row-sm-2">
+						<label id="american" class="switch"> <input
+							type="checkbox"> <span class="slider round"></span>Amerikanisch
+						</label>
+					</div>
+					<div class="row-sm-2">
+						<label id="spanish" class="switch"> <input type="checkbox">
+							<span class="slider round"></span>Spanisch
+						</label>
+					</div>
+					<div class="row-sm-2">
+						<label id="other" class="switch"> <input type="checkbox">
+							<span class="slider round"></span>Andere
+						</label>
+					</div>
 				</div>
 				<label for="subject">Ihr Anliegen</label>
 				<textarea id="request" name="request"

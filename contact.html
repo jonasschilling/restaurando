@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- Page Title -->
+<title>Kontakt</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="assets/images/logo/favicon.png"
+	type="image/x-icon">
+
+<!-- CSS Files -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link href="resources/css/bootstrap-theme.css" rel="stylesheet">
+<link href="resources/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="resources/css/bootstrap.css" rel="stylesheet">
+<link href="resources/css/bootstrap.css.map" rel="stylesheet">
+<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="resources/css/stylesheet01.css" rel="stylesheet">
+</head>
+<body style="background-color: #7F6E64">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="d-flex flex-grow-1">
+				<span class="w-100 d-lg-none d-block"> <!-- hidden spacer to center brand on mobile -->
+				</span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+					restaurando </a> <a
+					class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+					restaurando </a>
+				<div class="w-100 text-right">
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#myNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse flex-grow-1 text-right"
+				id="myNavbar">
+				<ul class="navbar-nav ml-auto flex-nowrap">
+					<li class="nav-item"><a href="index.html"
+						class="nav-link m-2 menu-item nav-active">Home</a></li>
+					<li class="nav-item"><a href="restaurants.html"
+						class="nav-link m-2 menu-item">Restaurants</a></li>
+					<li class="nav-item"><a href="qmuh.html"
+						class="nav-link m-2 menu-item">QMUH Test</a></li>
+					<li class="nav-item"><a href="#"
+						class="nav-link m-2 menu-item">Kontakt</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron text-center" id="jumbotronqmuh">
+			<div id="titletext">
+				<h1>QMUH Ravensburg</h1>
+				<p>Egal ob Kunde oder Restaurantbesitzer, hier können Sie uns
+					kontaktieren!</p>
+			</div>
+		</div>
+
+		<h3>Contact Form</h3>
+		<div class="container">
+			<form action="action_page.php">
+				<label for="type">Bitte Auswählen</label> <select id="type"
+					name="type" onchange="onChange()">
+					<option value="0">Bitte Auswählen</option>
+					<option value="1">Kunde</option>
+					<option value="2">Restaurantbesitzer</option>
+				</select>
+				<script>
+					function onChange() {
+						if (document.getElementById("type").value == 2) {
+							document.getElementById("restName").style.display = '';
+							document.getElementById("restAdress").style.display = '';
+							document.getElementById("restNameLabel").style.display = '';
+							document.getElementById("restAdressLabel").style.display = '';
+							document.getElementById("german").style.display = '';
+							document.getElementById("american").style.display = '';
+							document.getElementById("spanish").style.display = '';
+							document.getElementById("other").style.display = '';
+						} else {
+							document.getElementById("restName").style.display = 'none';
+							document.getElementById("restAdress").style.display = 'none';
+							document.getElementById("restNameLabel").style.display = 'none';
+							document.getElementById("restAdressLabel").style.display = 'none';
+							document.getElementById("german").style.display = 'none';
+							document.getElementById("american").style.display = 'none';
+							document.getElementById("spanish").style.display = 'none';
+							document.getElementById("other").style.display = 'none';
+						}
+					}
+				</script>
+				<label for="name">Name</label> <input type="text" id="name"
+					name="name" placeholder="Ihr Name.."> <label for="email">E-Mail-Adresse</label>
+				<input type="text" id="email" name="email"
+					placeholder="Ihre E-Mail-Adresse.."> <label
+					id="restNameLabel" for="restName">Restaurantname</label> <input
+					type="text" id="restName" name="restName"
+					placeholder="Name Ihres Restaurants.."> <label
+					id="restAdressLabel" for="restAdress">Restaurantadresse</label> <input
+					type="text" id="restAdress" name="restAdress"
+					placeholder="Adresse Ihres Restaurants..">
+					<div class="column"  style="padding: 10px">
+						<div class="row-sm-2">
+							<label id="german" class="switch"> <input type="checkbox">
+								<span class="slider round"></span>Deutsch
+							</label>
+						</div>
+						<div class="row-sm-2">
+							<label id="american" class="switch"> <input
+								type="checkbox"> <span class="slider round"></span>Amerikanisch
+							</label>
+						</div>
+						<div class="row-sm-2">
+							<label id="spanish" class="switch"> <input
+								type="checkbox"> <span class="slider round"></span>Spanisch
+							</label>
+						</div>
+						<div class="row-sm-2">
+							<label id="other" class="switch"> <input type="checkbox">
+								<span class="slider round"></span>Andere
+							</label>
+						</div>
+				</div>
+				<label for="subject">Ihr Anliegen</label>
+				<textarea id="request" name="request"
+					placeholder="Beschreiben Sie Ihr Anliegen.." style="height: 200px"></textarea>
+				<p align="center">
+					<button class="button" href="#" role="button" id="buttonSubmit"
+						type="submit">Anliegen abschicken</button>
+				</p>
+			</form>
+		</div>
+	</header>
+</body>
+</html>

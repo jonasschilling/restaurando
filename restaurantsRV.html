@@ -19,45 +19,63 @@
     <link href="resources/css/bootstrap.css.map" rel="stylesheet">
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="resources/css/stylesheet01.css" rel="stylesheet">
-
-    <!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
-    <!-- ACHTUNG: Respond.js funktioniert nicht, wenn du die Seite über file:// aufrufst -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="/resources/css/loginStyle.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body style="background-color: #7F6E64">
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="d-flex flex-grow-1">
-				<span class="w-100 d-lg-none d-block"> <!-- hidden spacer to center brand on mobile -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="d-flex flex-grow-1">
+				<span class="w-100 d-lg-none d-block">
+					<!-- hidden spacer to center brand on mobile -->
 				</span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
-            restaurando </a> <a
-                class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-            <img src="./bsrestaurant/assets/images/logo/logo.png" alt="logo">
-        </a>
-            <div class="w-100 text-right">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#myNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+					restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+					restaurando
+				</a>
+				<div class="w-100 text-right">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+				<ul class="navbar-nav ml-auto flex-nowrap">
+					<li class="nav-item"><a href="index.html" class="nav-link m-2 menu-item nav-active">Home</a></li>
+					<li class="nav-item"><a href="restaurantsFN.html" class="nav-link m-2 menu-item">Restaurants</a></li>
+					<li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img
+								src="/resources/img/login.png"> Login</button>
+
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="id01" class="modal">
+			<form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close"
+						title="Close Modal">&times;</span>
+					<img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
+				</div>
+
+				<div class="container">
+					<label for="usernameinput"><b>Benutzername</b></label>
+					<input type="text" placeholder="Benutzernamen eingeben" name="usernameinput" maxlength="50"
+						required>
+					<br>
+					<label for="passwordinput"><b>Passwort</b></label>
+					<input type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30" required>
+					<br>
+					<button type="submit">Login</button>
+				</div>
+			</form>
         </div>
-        <div class="collapse navbar-collapse flex-grow-1 text-right"
-             id="myNavbar">
-            <ul class="navbar-nav ml-auto flex-nowrap">
-                <li class="nav-item"><a href="index.html"
-                                        class="nav-link m-2 menu-item nav-active">Home</a></li>
-                <li class="nav-item"><a href="restaurantsRV.html"
-                                        class="nav-link m-2 menu-item">Restaurants</a></li>
-                <li class="nav-item"><a href="qmuh.html"
-                                        class="nav-link m-2 menu-item">QMUH Test</a></li>
-                <li class="nav-item"><a href="#"
-                                        class="nav-link m-2 menu-item">Kontakt</a></li>
-            </ul>
-        </div>
-    </nav>
+        
     <div class="jumbotron text-center" id="jumbotronIndex2">
         <div id="titletext">
             <h1>Restaurants in Ravensburg</h1>

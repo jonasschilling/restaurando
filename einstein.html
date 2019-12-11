@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
-    <title>Asia World</title>
+    <title>Café Einstein</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="resources/css/bootstrap-theme.css" rel="stylesheet">
     <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="resources/css/bootstrap.css" rel="stylesheet">
     <link href="resources/css/bootstrap.css.map" rel="stylesheet">
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/stylesheet01.css" rel="stylesheet">
     <link href="resources/css/stylesheet01.css" rel="stylesheet">
     <link href="/resources/css/loginStyle.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
 			<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
 				<ul class="navbar-nav ml-auto flex-nowrap">
 					<li class="nav-item"><a href="index.html" class="nav-link m-2 menu-item nav-active">Home</a></li>
-					<li class="nav-item"><a href="restaurantsFN.html" class="nav-link m-2 menu-item">Restaurants</a></li>
+					<li class="nav-item"><a href="restaurantsUlm.html" class="nav-link m-2 menu-item">Restaurants</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -76,34 +76,35 @@
 			</form>
         </div>
         
-    <div class="jumbotron text-center" id="jumbotronasiaworld">
+    <div class="jumbotron text-center" id="jumbotroneinstein">
         <div id="titletext">
-            <h1>Asia World</h1>
-            <p>Reservieren Sie Ihren Tisch bei Asia World Friedrichshafen - gleich
+            <h1>Café Einstein</h1>
+            <p>Reservieren Sie Ihren Tisch im Café Einstein Ulm - gleich
                 hier!</p>
         </div>
+        <p>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
                 <h3>Kategorien</h3>
-                <p>Chinesisch, Mongolisch, Japanisch</p>
+                <p>Frühstück, Kaffee, Kuchen</p>
             </div>
             <div class="col-sm-4">
                 <h3>Was?</h3>
-                <p>Großes asiatisches Buffetrestaurant in zwangloser Atmosphäre mit Schaukochen und Sushi-Fließband.</p>
+                <p>Modernes Lokal serviert bis 23 Uhr innovative Frühstückskreationen sowie schwäbische Kost, Steaks und Burger.</p>
             </div>
             <div class="col-sm-4">
                 <h3>Wo?</h3>
-                <p>Adelheidstraße 36</p>
-                <p>88046 Friedrichshafen</p>
+                <p>Wichernstraße 10</p>
+                <p>89073 Ulm</p>
             </div>
         </div>
     </div>
     <div class="container" id="reserve">
         <form action="/backend/addreservation.php" method="POST">
-            <h2 align="center">Reservierung bei Asia World Friedrichshafen</h2>
-            <input name="restaurant" hidden value="Asia World">
+            <h2 align="center">Reservierung bei Café Einstein</h2>
+            <input name="restaurant" hidden value="Café Einstein">
             <div class="row">
 					<div class="col-sm-4" align="center">
 						<h3>Datum auswählen:</h3>
@@ -144,7 +145,7 @@
 			<span>Restaurando</span>
 		</h3>
 		<p class="footer-links">
-			<a href="index.html" class="link-1">Home</a> <a href="restaurantsFN.html">Restaurants</a> <a
+			<a href="index.html" class="link-1">Home</a> <a href="restaurantsUlm.html">Restaurants</a> <a
 				href="contact.html">Kontakt</a>
 		</p>
 		<p class="footer-company-name">Restaurando © 2019</p>

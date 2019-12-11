@@ -292,7 +292,7 @@ button {
 
 .card-img-top-index {
 	height: 450px;
-	width: content-box;
+	width: 100%;
 }
 
 #jumbotronIndex2 {

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+    <title>Restaurants Ravensburg</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link href="resources/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.css.map" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/stylesheet01.css" rel="stylesheet">
+
+    <!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
+    <!-- ACHTUNG: Respond.js funktioniert nicht, wenn du die Seite über file:// aufrufst -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="background-color: #7F6E64">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="d-flex flex-grow-1">
+				<span class="w-100 d-lg-none d-block"> <!-- hidden spacer to center brand on mobile -->
+				</span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+            restaurando </a> <a
+                class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+            <img src="./bsrestaurant/assets/images/logo/logo.png" alt="logo">
+        </a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#myNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right"
+             id="myNavbar">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item"><a href="index.html"
+                                        class="nav-link m-2 menu-item nav-active">Home</a></li>
+                <li class="nav-item"><a href="restaurantsRV.html"
+                                        class="nav-link m-2 menu-item">Restaurants</a></li>
+                <li class="nav-item"><a href="qmuh.html"
+                                        class="nav-link m-2 menu-item">QMUH Test</a></li>
+                <li class="nav-item"><a href="#"
+                                        class="nav-link m-2 menu-item">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron text-center" id="jumbotronIndex2">
+        <div id="titletext">
+            <h1>Restaurants in Ravensburg</h1>
+            <p>Wählen Sie Ihr Lieblingsrestaurant und reservieren Sie gleich hier!</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <a href="qmuh.html">
+            <div class="card" style="width: 18rem">
+                <img class="card-img-top" src="./resources/img/qmuh.png" alt="Card image cap">
+                <div class="card-body" align="center">
+                    <p class="card-text">QMUH Ravensburg</p>
+                    <a href="qmuh.html#reserve" class="card-button">Zur
+                        Reservierung</a>
+                </div>
+            </div>
+        </a>
+        <a href="mohren.html">
+            <div class="card" style="width: 18rem">
+                <img class="card-img-top" src="./resources/img/mohren4.jpg"
+                     alt="Card image cap">
+                <div class="card-body" align="center">
+                    <p class="card-text">Wirtshaus Mohren</p>
+                    <a href="mohren.html#reserve" class="card-button">Zur
+                        Reservierung</a>
+                </div>
+            </div>
+        </a>
+        <a href="Ilpodio.html">
+            <div class="card" style="width: 18rem">
+                <img class="card-img-top" src="./resources/img/IL_podio.jpg"
+                     alt="Card image cap">
+                <div class="card-body" align="center">
+                    <p class="card-text">Il Podio Ravensburg</p>
+                    <a href="Ilpodio.html#reserve" class="card-button">Zur
+                        Reservierung</a>
+                </div>
+            </div>
+        </a>
+        <a href="asienpalast.html">
+            <div class="card" style="width: 18rem">
+                <img class="card-img-top" src="./resources/img/AsienPalast.jpg"
+                     alt="Card image cap">
+                <div class="card-body" align="center">
+                    <p class="card-text">Asien Palast Ravensburg</p>
+                    <a href="asienpalast.html#reserve" class="card-button">Zur
+                        Reservierung</a>
+                </div>
+            </div>
+        </a>
+        <a href="gleis9.html">
+            <div class="card" style="width: 18rem">
+                <img class="card-img-top" src="./resources/img/Gleis9.jpg"
+                     alt="Card image cap">
+                <div class="card-body" align="center">
+                    <p class="card-text">Gleis 9 Ravensburg</p>
+                    <a href="gleis9.html#reserve" class="card-button">Zur
+                        Reservierung</a>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</header>
+<script src="reservation.js"></script>
+</body>
+</html>

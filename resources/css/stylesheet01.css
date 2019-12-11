@@ -15,6 +15,7 @@ button {
 	border-radius: 8px;
 }
 
+
 .button {
 	background-color: #52DEE5;
 	border: none;
@@ -70,7 +71,7 @@ button {
 	color: #000000;
 	background-color: #EEE5E9;
 	border: none;
-	width: 250px;
+	width: 100%;
 	height: 50px;
 	border-radius: 8px;
 	font-size: 1.6em;
@@ -111,7 +112,7 @@ button {
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
-	border-radius: 50px;
+	border-radius: 5px;
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
@@ -342,6 +343,27 @@ button {
 #jumbotronmohren {
 	background-image: url("../img/mohren2.png");
 	background-size: cover;
+}
+
+#jumbotronspicygrill{
+   background-image: url("../img/spicygrill2.png");
+   background-size: cover;
+}
+#jumbotroneinstein{
+   background-image: url("../img/einstein2.png");
+   background-size: cover;
+}
+#jumbotronlosteria{
+   background-image: url("../img/l'osteria2.png");
+   background-size: cover;
+}
+#jumbotronforelle{
+   background-image: url("../img/forelle2.png");
+   background-size: cover;
+}
+#jumbotronkonya{
+   background-image: url("../img/konyasushi2.png");
+   background-size: cover;
 }
 
 .jumbotron-background {

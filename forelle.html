@@ -3,21 +3,21 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
-	<title>QMUH Ravensburg</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+    <title>Zur Forelle</title>
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="resources/css/bootstrap-theme.css" rel="stylesheet">
-	<link href="resources/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="resources/css/bootstrap.css" rel="stylesheet">
-	<link href="resources/css/bootstrap.css.map" rel="stylesheet">
-	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
-	<link href="resources/css/stylesheet01.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="resources/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.css.map" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/stylesheet01.css" rel="stylesheet">
     <link href="/resto/login/loginStyle.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -75,40 +75,39 @@
 			</form>
         </div>
         
-		<div class="jumbotron text-center" id="jumbotronqmuh">
-			<div id="titletext">
-				<h1>QMUH Ravensburg</h1>
-				<p>Reservieren Sie Ihren Tisch bei QMUH Ravensburg - gleich
-					hier!</p>
-			</div>
-			<p>
-				<a class="button" href="#" role="button" id="button01">Speisekarte
-					>></a>
-			</p>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-					<h3>Kategorien</h3>
-					<p>amerikanisch, Steakhouse, deutsch</p>
-				</div>
-				<div class="col-sm-4">
-					<h3>Was?</h3>
-					<p>Im ehemaligen Posthaus bietet das Lokal mit dezentem
-						Westernlook und Bar Steaks und Burger sowie Partyabende.</p>
-				</div>
-				<div class="col-sm-4">
-					<h3>Wo?</h3>
-					<p>Eisenbahnstraße 44</p>
-					<p>88214 Ravensburg</p>
-				</div>
-			</div>
-		</div>
-		<div class="container" id="reserve">
-			<form action="/backend/addreservation.php" method="POST">
-				<h2 align="center">Reservierung bei QMUH Ravensburg</h2>
-				<input name="restaurant" hidden value="QMUH Ravensburg">
-				<div class="row">
+    <div class="jumbotron text-center" id="jumbotronforelle">
+        <div id="titletext">
+            <h1>Zur Forelle Ulm</h1>
+            <p>Reservieren Sie Ihren Tisch bei Zur Forelle in Ulm - gleich
+                hier!</p>
+        </div>
+        <p>
+            <a class="button" href="#" role="button" id="button01">Speisekarte
+                >></a>
+        </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Kategorien</h3>
+                <p>schwäbisch, Fisch</p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Was?</h3>
+                <p>Das 400 Jahre alte Lokal mit romantischer Terrasse bietet Forellen und Schwäbisches in holzvertäfelten Stuben.</p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Wo?</h3>
+                <p>Fischergasse 25</p>
+                <p>89073 Ulm</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="reserve">
+        <form action="/backend/addreservation.php" method="POST">
+            <h2 align="center">Reservierung bei Zur Forelle Ulm</h2>
+            <input name="restaurant" hidden value="Zur Forelle Ulm">
+            <div class="row">
 					<div class="col-sm-4" align="center">
 						<h3>Datum auswählen:</h3>
 						<img src="https://img.icons8.com/metro/26/000000/calendar.png">

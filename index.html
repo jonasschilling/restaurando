@@ -3,28 +3,29 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
-	<title>QMUH Ravensburg</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+    <title>restaurando</title>
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="resources/css/bootstrap-theme.css" rel="stylesheet">
-	<link href="resources/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="resources/css/bootstrap.css" rel="stylesheet">
-	<link href="resources/css/bootstrap.css.map" rel="stylesheet">
-	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
-	<link href="resources/css/stylesheet01.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="resources/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.css.map" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/stylesheet01.css" rel="stylesheet">
+    <link href="/resto/login/loginStyle.css" rel="stylesheet">
 
-	<!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
-	<!-- ACHTUNG: Respond.js funktioniert nicht, wenn du die Seite über file:// aufrufst -->
-	<!--[if lt IE 9]>
-		      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		    <![endif]-->
+    <!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
+    <!-- ACHTUNG: Respond.js funktioniert nicht, wenn du die Seite über file:// aufrufst -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body style="background-color: #7F6E64">
@@ -49,27 +50,105 @@
 					<li class="nav-item"><a href="restaurants.html" class="nav-link m-2 menu-item">Restaurants</a></li>
 					<li class="nav-item"><a href="qmuh.html" class="nav-link m-2 menu-item">QMUH Test</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block">
+                    <!-- hidden spacer to center brand on mobile -->
+                </span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+                    restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+                    restaurando
+                </a>
+                <div class="w-100 text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item"><a href="#" class="nav-link m-2 menu-item nav-active">Home</a></li>
+                    <li class="nav-item"><a href="restaurants.html" class="nav-link m-2 menu-item">Restaurants</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
 				</ul>
-			</div>
-		</nav>
-		<div class="jumbotron text-center" id="jumbotronIndex">
-			<div id="titletext">
-				<h1>restaurando</h1>
-				<p>Herzlich Willkommen bei restaurando! Legen Sie gleich los und
-					reservieren Sie sich einen Tisch bei einem unserer Restaurants!</p>
-			</div>
-			<p>
-				<a class="button" href="restaurants.html" role="button" id="button01">Zu den
-					Restaurants >></a>
-			</p>
-		</div>
-	</header>
-	<form action="/backend/showreservation.php" method="GET">
-		<p align="center">
-			<button class="button" href="#" role="button" id="showResBtn" type="submit" onclick="passWord()">Reservierungen anzeigen</button>
-		</p>
-	</form>
-	<script src="passlock.js"></script>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+                        <button onclick="document.getElementById('id01').style.display='block'"
+							style="width:auto;"><img src="/resources/img/login.png">   Login</button>
+						
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
+                </div>
+
+                <div class="container">
+                    <label for="usernameinput"><b>Benutzername</b></label>
+                    <input type="text" placeholder="Benutzernamen eingeben" name="usernameinput" maxlength="50" required>
+                    <br>
+                    <label for="passwordinput"><b>Passwort</b></label>
+                    <input type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30" required>
+                    <br>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="jumbotron text-center" id="jumbotronStartseite">
+            <div id="titletext">
+                <h1>Herzlich Willkommen</h1>
+                <p>Reservieren Sie jetzt Ihr Lieblingsrestaurant in Ihrem Ort</p>
+            </div>
+            <p>
+                <a class="button" href="restaurants.html" role="button" id="button01">Zu den
+                    Restaurants >></a>
+            </p>
+        </div>
+    </header>
+
+    <div class="card-group">
+        <a href="restaurants.html" class="cardAction">
+            <div class="card" style="width: 565px; height:710px">
+                <img class="card-img-top" src="resources/img/rav.jpg" alt="Ravensburg">
+                <div class="card-body">
+                    <h3 class="card-title">Ravensburg</h3>
+                    <p class="card-text"><small>It's a broader card with text below as a natural lead-in to extra
+                            content. This content is a little longer.</small></p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </a>
+        <a href="restaurants.html" class="cardAction">
+            <div class="card" style="width: 565px; height:710px">
+                <img class="card-img-top" src="resources/img/fn.jpg" alt="Friedrichshafen">
+                <div class="card-body">
+                    <h3 class="card-title">Friedrichsahfen</h3>
+                    <p class="card-text"><small> This card has supporting text below as a natural lead-in to additional
+                            content.</small></p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="cardAction">
+            <div class="card" style="width: 565px; height:710px">
+                <img class="card-img-top" src="resources/img/ulm2.jpg" alt="Ulm">
+                <div class="card-body">
+                    <h3 class="card-title">Ulm</h3>
+                    <p class="card-text"><small>It's a broader card with text below as a natural lead-in to extra
+                            content. This content is a little longer.This card has even longer content than the first to
+                            show that equal height action.</small></p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </a>
+    </div>
 </body>
 
 </html>

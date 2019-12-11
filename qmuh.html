@@ -18,7 +18,9 @@
 	<link href="resources/css/bootstrap.css.map" rel="stylesheet">
 	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 	<link href="resources/css/stylesheet01.css" rel="stylesheet">
+    <link href="/resto/login/loginStyle.css" rel="stylesheet">
 </head>
+
 
 <body style="background-color: #7F6E64">
 	<header>
@@ -42,9 +44,53 @@
 					<li class="nav-item"><a href="restaurants.html" class="nav-link m-2 menu-item">Restaurants</a></li>
 					<li class="nav-item"><a href="#" class="nav-link m-2 menu-item">QMUH Test</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block">
+                    <!-- hidden spacer to center brand on mobile -->
+                </span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+                    restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+                    restaurando
+                </a>
+                <div class="w-100 text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item"><a href="index.html" class="nav-link m-2 menu-item nav-active">Home</a></li>
+                    <li class="nav-item"><a href="restaurants.html" class="nav-link m-2 menu-item">Restaurants</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
 				</ul>
-			</div>
-		</nav>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+                        <button onclick="document.getElementById('id01').style.display='block'"
+                            style="width:auto;"><img src="/resources/img/login.png">   Login</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
+                </div>
+
+                <div class="container">
+                    <label for="usernameinput"><b>Benutzername</b></label>
+                    <input type="text" placeholder="Benutzernamen eingeben" name="usernameinput" maxlength="50" required>
+                    <br>
+                    <label for="passwordinput"><b>Passwort</b></label>
+                    <input type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30" required>
+                    <br>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
 		<div class="jumbotron text-center" id="jumbotronqmuh">
 			<div id="titletext">
 				<h1>QMUH Ravensburg</h1>
@@ -82,12 +128,14 @@
 					<div class="col-sm-4" align="center">
 						<h3>Datum auswälen:</h3>
 						<img src="https://img.icons8.com/metro/26/000000/calendar.png">
-						<input class="reservation" type="date" id="date" min="2019-11-13" max="2020-12-31" required name="dateinput">
+						<input class="reservation" type="date" id="date" min="2019-11-13" max="2020-12-31" required
+							name="dateinput">
 					</div>
 					<div class="col-sm-4" align="center">
 						<h3>Uhrzeit auswälen:</h3>
 						<img src="https://img.icons8.com/metro/26/000000/clock.png">
-						<input class="reservation" type="time" id="time" min="09:00" max="23:00" required name="timeinput">
+						<input class="reservation" type="time" id="time" min="09:00" max="23:00" required
+							name="timeinput">
 					</div>
 					<div class="col-sm-4" align="center">
 						<h3>Anzahl Personen auswählen:</h3>
@@ -105,6 +153,7 @@
 						<button class="button" href="#" role="button" id="buttonReservation" type="submit">Reservierung
 							absenden</button>
 					</p>
+				</p>
 			</form>
 		</div>
 	</header>

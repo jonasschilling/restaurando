@@ -3,7 +3,7 @@
 
 	$conn = getConnection();
 
-	$sql = "SELECT * FROM reservierung";
+	$sql = "SELECT * FROM reservation";
 
 	if ($result = $conn->query($sql)) {
 		while ($singledata = $result->fetch_object()) {
@@ -20,7 +20,7 @@
 		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 		.tg .tg-il3a{color:#ffffff;border-color:#ffffff;text-align:left;vertical-align:top}
 		</style>
-		<a type="button" class="button" href="../index.html"><< zur&uuml;ck</a>
+		<a type="button" class="button" href="../index.html">Home</a>
 		<div align="center">
 			<h1 style="color:#ffffff;">Alle Reservierungen</h1>
 			<br>
@@ -53,7 +53,7 @@
 							<?php echo date("d.m.Y", strtotime($content->resDate)); ?>
 						</td>
 						<td class="tg-il3a">
-							<?php echo $content->resTime; ?>
+							<?php echo date("H:i", strtotime($content->resTime)); ?>
 						</td>
 						<td class="tg-il3a">
 							<?php echo $content->amountPers; ?>

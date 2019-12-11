@@ -35,26 +35,6 @@ button {
 	background-color: #23D5DE;
 }
 
-.adminCard {
-	background-color: #EEE5E9;
-	color: #383D3B;
-	border-style: solid;
-	border-color: #383D3B;
-	border-radius: 5px;
-	margin-top: 16px;
-	margin-right: 16px;
-	margin-bottom: 16px;
-	margin-left: 16px;
-	padding-top: 5px;
-	padding-right: 5px;
-	padding-bottom: 5px;
-	padding-left: 5px;
-}
-
-.admincard-text {
-	color: #383D3B;
-}
-
 .card {
 	background-color: #383d3b;
 	color: #EEE5E9;
@@ -4145,7 +4125,8 @@ tbody.collapse.in {
 	content: "";
 	border-top: 0;
 	border-bottom: 4px dashed;
-	border-bottom: 4px solid\9
+	border-bottom: 4px solid\9
+
 }
 
 .dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu {
@@ -8220,4 +8201,13 @@ button.close {
 	.hidden-print {
 		display: none !important
 	}
+}
+
+#jumbotronStartseite{
+	background-image: url("../img/tabletry.png");
+	background-size: cover;
+}
+.card-img-top{
+	height: 450px;
+	width: content-box;
 }

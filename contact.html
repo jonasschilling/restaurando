@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required Meta Tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Page Title -->
+	<title>Kontakt</title>
+
+	<!-- Favicon -->
+	<!-- <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon"> -->
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="resources/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="resources/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="resources/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/bootstrap.css.map" rel="stylesheet">
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+	<link href="resources/css/stylesheet01.css" rel="stylesheet">
+    <link href="/resto/login/loginStyle.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #7F6E64">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="d-flex flex-grow-1">
+				<span class="w-100 d-lg-none d-block">
+					<!-- hidden spacer to center brand on mobile -->
+				</span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+					restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+					restaurando
+				</a>
+				<div class="w-100 text-right">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+				<ul class="navbar-nav ml-auto flex-nowrap">
+					<li class="nav-item"><a href="index.html" class="nav-link m-2 menu-item nav-active">Home</a></li>
+					<li class="nav-item"><a href="restaurants.html" class="nav-link m-2 menu-item">Restaurants</a></li>
+					<li class="nav-item"><a href="#" class="nav-link m-2 menu-item">Kontakt</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img
+								src="/resources/img/login.png"> Login</button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="id01" class="modal">
+			<form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close"
+						title="Close Modal">&times;</span>
+					<img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
+				</div>
+
+				<div class="container">
+					<label for="usernameinput"><b>Benutzername</b></label>
+					<input type="text" placeholder="Benutzernamen eingeben" name="usernameinput" maxlength="50"
+						required>
+					<br>
+					<label for="passwordinput"><b>Passwort</b></label>
+					<input type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30" required>
+					<br>
+					<button type="submit">Login</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="jumbotron text-center" id="jumbotronIndex">
+			<div id="titletext">
+				<h1>Erreichen Sie Uns</h1>
+				<p>Egal ob Restaurantbesitzer oder Kunde, hier k�nnnen Sie Ihr
+					Anliegen loswerden.</p>
+			</div>
+		</div>
+	</header>
+
+	<div class="col-lg-9" align="center">
+		<form action="/backend/addrequest.php" method="POST">
+			<div class="default-select" id="default-select-id">
+				<select id="selectType">
+					<!-- onchange="onChange()" -->
+					<option value="1">Kunde</option>
+					<option value="2">Restaurantbesitzer</option>
+				</select>
+			</div>
+			<div class="col-sm-4" align="center">
+				<h3>Name:</h3>
+				<input class="reservation" type="text" id="name" name="nameinput" required>
+			</div>
+			<div class="col-sm-4" align="center">
+				<h3>Email:</h3>
+				<input class="reservation" type="email" id="email" name="emailinput" required>
+			</div>
+			<div class="switch-wrap d-flex justify-content-between" id="cat1" style="display: none">
+				<p>Amerikanisch</p>
+				<input type="checkbox" id="amerikanisch"> <label for="amerikanisch"></label>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="right">
+				<textarea name="messageinput" cols="100" rows="7" placeholder="Ihr Anliegen"
+					onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ihr Anliegen'" required></textarea>
+			</div>
+			<br>
+			<button type="submit" class="template-btn">Absenden</button>
+			<br>
+			<br>
+		</form>
+	</div>
+</body>
+
+</html>

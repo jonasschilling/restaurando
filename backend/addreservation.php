@@ -2,7 +2,7 @@
 	require('sql.php');
 	
 	if(array_key_exists("nameinput", $_POST) && array_key_exists("dateinput", $_POST) && array_key_exists("timeinput", $_POST) && array_key_exists("amountinput", $_POST) && array_key_exists("restaurant", $_POST)){
-		$sql = "INSERT INTO reservierung (`restaurant`, `resName`, `resDate`, `resTime`, `amountPers`) VALUES ('".$_POST["restaurant"]."', '".$_POST["nameinput"]."', '".$_POST["dateinput"]."', '".$_POST["timeinput"]."', '".$_POST["amountinput"]."');";
+		$sql = "INSERT INTO reservation (`restaurant`, `resName`, `resDate`, `resTime`, `amountPers`) VALUES ('".$_POST["restaurant"]."', '".$_POST["nameinput"]."', '".$_POST["dateinput"]."', '".$_POST["timeinput"]."', '".$_POST["amountinput"]."');";
 		mysqli_query(getConnection(), $sql);
 		if(mysqli_error(GetConnection())){
 			echo "SQL Fehler:".mysqli_error(getConnection());
@@ -22,6 +22,6 @@
 			<?php
 		}
 	} else {
-		echo "Bitte fÃ¼llen Sie alle Felder aus!";
+		echo "Bitte füllen Sie alle Felder aus!";
 	}
 ?>

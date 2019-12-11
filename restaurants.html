@@ -19,46 +19,40 @@
 	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 	<link href="resources/css/stylesheet01.css" rel="stylesheet">
 	<link href="/resto/login/loginStyle.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body style="background-color: #7F6E64">
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="d-flex flex-grow-1">
-				<span class="w-100 d-lg-none d-block">
-					<!-- hidden spacer to center brand on mobile -->
-				</span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
-					restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-					restaurando
-				</a>
-				<div class="w-100 text-right">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				</div>
-			</div>
-			<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-				<ul class="navbar-nav ml-auto flex-nowrap">
-					<li class="nav-item"><a href="index.html"
-						class="nav-link m-2 menu-item nav-active">Home</a></li>
-					<li class="nav-item"><a href="restaurants.html"
-						class="nav-link m-2 menu-item">Restaurants</a></li>
-					<li class="nav-item"><a href="qmuh.html"
-						class="nav-link m-2 menu-item">QMUH Test</a></li>
-					<li class="nav-item"><a href="contact.html"
-						class="nav-link m-2 menu-item">Kontakt</a></li>
-					<li class="nav-item"><a href="index.html" class="nav-link m-2 menu-item nav-active">Home</a></li>
-					<li class="nav-item"><a href="#" class="nav-link m-2 menu-item">Restaurants</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block">
+                    <!-- hidden spacer to center brand on mobile -->
+                </span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+                    restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+                    restaurando
+                </a>
+                <div class="w-100 text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item"><a href="index.html" class="nav-link m-2 menu-item nav-active">Home</a></li>
+                    <li class="nav-item"><a href="restaurants.html" class="nav-link m-2 menu-item">Restaurants</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img
-								src="/resources/img/login.png"> Login</button>
-					</li>
-				</ul>
-			</div>
-		</nav>
+                        <button onclick="document.getElementById('id01').style.display='block'"
+							style="width:auto;"><img src="/resources/img/login.png">   Login</button>
+						
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
 		<div id="id01" class="modal">
 			<form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
@@ -110,7 +104,41 @@
 			</a>
 		</div>
 	</header>
-	<script src="reservation.js"></script>
 </body>
+<footer class="footer-distributed">
+	<div class="footer-left">
+		<h3>
+			<span>Restaurando</span>
+		</h3>
+		<p class="footer-links">
+			<a href="index.html" class="link-1">Home</a> <a href="restaurants.html">Restaurants</a> <a
+				href="contact.html">Kontakt</a>
+		</p>
+		<p class="footer-company-name">Restaurando © 2019</p>
+	</div>
+	<div class="footer-center">
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p>
+				<span>Georgstraße 13</span> Ravensburg, Deutschland
+			</p>
+		</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+49 1575 444444</p>
+		</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p>
+				<a href="mailto:jonas.schilling@sap.com">support@restaurando.com</a>
+			</p>
+		</div>
+	</div>
+	<div class="footer-right">
+		<p class="footer-company-about">
+			<span>Über uns</span> Restaurando beste Firma der Welt mit der besten Homepage der Welt. REALTALK
+		</p>
+	</div>
+</footer>
 
 </html>

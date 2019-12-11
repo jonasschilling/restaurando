@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="background-color: #7F6E64">
+<body style="background-color: #7F6E64" onload="onChange();">
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="d-flex flex-grow-1">
@@ -80,79 +80,91 @@
 			</div>
 		</div>
 		<div class="container-contact">
-			<h2 align="center">Contact Form</h2>
-			<form action="action_page.php">
-				<div class="select">
-					<select id="type" class="contact-text-input" name="type" onchange="onChange()">
-						<option value="0">Bitte Auswählen</option>
-						<option value="1">Kunde</option>
-						<option value="2">Restaurantbesitzer</option>
-					</select>
-				</div>
-				<script>
-					function onChange() {
-						if (document.getElementById("type").value == 2) {
-							document.getElementById("restName").style.display = '';
-							document.getElementById("restAdress").style.display = '';
-							document.getElementById("restNameLabel").style.display = '';
-							document.getElementById("restAdressLabel").style.display = '';
-							document.getElementById("german").style.display = '';
-							document.getElementById("american").style.display = '';
-							document.getElementById("spanish").style.display = '';
-							document.getElementById("other").style.display = '';
-						} else {
-							document.getElementById("restName").style.display = 'none';
-							document.getElementById("restAdress").style.display = 'none';
-							document.getElementById("restNameLabel").style.display = 'none';
-							document.getElementById("restAdressLabel").style.display = 'none';
-							document.getElementById("german").style.display = 'none';
-							document.getElementById("american").style.display = 'none';
-							document.getElementById("spanish").style.display = 'none';
-							document.getElementById("other").style.display = 'none';
-						}
+			<h2 align="center">Kontaktformular</h2>
+			<div class="select">
+				<select required id="type" class="contact-text-input" name="type" onchange="onChange()">
+					<option value="0">Rolle auswählen</option>
+					<option value="1">Kunde</option>
+					<option value="2">Restaurantbesitzer</option>
+				</select>
+			</div>
+			<script>
+				function onChange() {
+					if (document.getElementById("type").value == 2) {
+						document.getElementById("namelabel").style.display = '';
+						document.getElementById("name").style.display = '';
+						document.getElementById("emaillabel").style.display = '';
+						document.getElementById("email").style.display = '';
+						document.getElementById("restNameLabel").style.display = '';
+						document.getElementById("restName").style.display = '';
+						document.getElementById("restAdressLabel").style.display = '';
+						document.getElementById("restAdress").style.display = '';
+						document.getElementById("requestlabel").style.display = '';
+						document.getElementById("request").style.display = '';
+					} else if(document.getElementById("type").value == 1) {
+						document.getElementById("namelabel").style.display = '';
+						document.getElementById("name").style.display = '';
+						document.getElementById("emaillabel").style.display = '';
+						document.getElementById("email").style.display = '';
+						document.getElementById("restNameLabel").style.display = 'none';
+						document.getElementById("restName").style.display = 'none';
+						document.getElementById("restAdressLabel").style.display = 'none';
+						document.getElementById("restAdress").style.display = 'none';
+						document.getElementById("requestlabel").style.display = '';
+						document.getElementById("request").style.display = '';
+					} else {
+						document.getElementById("namelabel").style.display = 'none';
+						document.getElementById("name").style.display = 'none';
+						document.getElementById("emaillabel").style.display = 'none';
+						document.getElementById("email").style.display = 'none';
+						document.getElementById("restNameLabel").style.display = 'none';
+						document.getElementById("restName").style.display = 'none';
+						document.getElementById("restAdressLabel").style.display = 'none';
+						document.getElementById("restAdress").style.display = 'none';
+						document.getElementById("requestlabel").style.display = 'none';
+						document.getElementById("request").style.display = 'none';
 					}
-				</script>
-				<label for="name">Name</label>
-				<input type="text" class="contact-text-input" id="name" name="name" placeholder="Ihr Name.."> 
-				
-				<label for="email">E-Mail-Adresse</label>
-				<input type="email" class="contact-text-input" id="email" name="email" placeholder="Ihre E-Mail-Adresse..">
-				
-				<label id="restNameLabel" for="restName">Restaurantname</label> 
-				<input type="text" class="contact-text-input" id="restName" name="restName" placeholder="Name Ihres Restaurants..">
-				
-				<label id="restAdressLabel" for="restAdress">Restaurantadresse</label> 
-				<input type="text" class="contact-text-input" id="restAdress" name="restAdress" placeholder="Adresse Ihres Restaurants..">
-				
-				<div class="column" style="padding: 10px">
-					<div class="row-sm-2">
-						<label id="german" class="switch"> <input type="checkbox">
-							<span class="slider round"></span>Deutsch
-						</label>
-					</div>
-					<div class="row-sm-2">
-						<label id="american" class="switch"> <input type="checkbox"> <span
-								class="slider round"></span>Amerikanisch
-						</label>
-					</div>
-					<div class="row-sm-2">
-						<label id="spanish" class="switch"> <input type="checkbox">
-							<span class="slider round"></span>Spanisch
-						</label>
-					</div>
-					<div class="row-sm-2">
-						<label id="other" class="switch"> <input type="checkbox">
-							<span class="slider round"></span>Andere
-						</label>
-					</div>
-				</div>
-				<label for="subject">Ihr Anliegen</label>
+				}
+			</script>
+
+			<form action="/backend/addrequest.php" method="POST">
+				<input hidden id="typeinput" type="text" name="typeinput" value="0">
+
+				<label id="namelabel" for="name">Name</label>
+				<input type="text" class="contact-text-input" id="name" name="nameinput" placeholder="Ihr Name..."
+					required>
+
+				<label id="emaillabel" for="email">E-Mail-Adresse</label>
+				<input type="email" class="contact-text-input" id="email" name="emailinput"
+					placeholder="Ihre E-Mail-Adresse..." required>
+
+				<label id="restNameLabel" for="restName">Restaurantname</label>
+				<input type="text" class="contact-text-input" id="restName" name="restaurant"
+					placeholder="Name Ihres Restaurants..." required>
+
+				<label id="restAdressLabel" for="restAdress">Restaurantadresse</label>
+				<input type="text" class="contact-text-input" id="restAdress" name="adressinput"
+					placeholder="Adresse Ihres Restaurants..." required>
+
+				<label id="requestlabel" for="subject">Ihr Anliegen</label>
 				<br>
-				<textarea id="request" name="request" placeholder="Beschreiben Sie Ihr Anliegen.."
-					style="width:100%; height: 10em"></textarea>
+				<textarea id="request" name="requestinput" placeholder="Beschreiben Sie Ihr Anliegen..."
+					style="width:100%; height: 10em" required></textarea>
 				<p align="center">
-					<button class="button" href="#" role="button" id="buttonSubmit" type="submit">Anliegen
+					<button class="button" href="#" role="button" id="buttonSubmit" type="submit"
+						onclick="setTypeValue();">Anliegen
 						abschicken</button>
+					<script>
+						function setTypeValue() {
+							if (document.getElementById("type").value == 2) {
+								document.getElementById("typeinput").value = '2';
+							} else if (document.getElementById("type").value == 1) {
+								document.getElementById("typeinput").value = '1';
+								document.getElementById("restName").value = '-';
+								document.getElementById("restAdress").value = '-';
+							}
+						}
+					</script>
 				</p>
 			</form>
 		</div>

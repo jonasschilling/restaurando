@@ -21,7 +21,7 @@
 			if($finalresult == $password){
 				echo "breakpoint1";
 				?>
-					<form id="autosubmitform" action="./showreservation.php" method="POST">
+					<form id="autosubmitform" action="./showadmin.php" method="POST">
 						<input name="uname" hidden value="<?php echo $username; ?>">
 						<input name="pwd" hidden value="<?php echo $password; ?>">
 					</form>

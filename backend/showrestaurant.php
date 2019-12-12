@@ -37,7 +37,7 @@
 				<a type="button" class="button" href="../index.html">Home</a>
 				<div align="center">
 					<h1 style="color:#ffffff;">Restaurantbesitzer-Sicht</h1>
-					<h5 style="color:#ffffff;">Hier k&ouml;nnen alle Reservierungen und Anfragen eingesehen werden.</h5>
+					<h5 style="color:#ffffff;">Hier k&ouml;nnen alle Reservierungen eingesehen werden.</h5>
 				</div>
 				<br>
 				<div id="reservation">

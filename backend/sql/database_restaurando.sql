@@ -56,6 +56,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 CREATE TABLE IF NOT EXISTS `restaurando`.`user` (
   `username` VARCHAR(50) NOT NULL,
   `userpassword` VARCHAR(30) NULL DEFAULT NULL,
+  `username` CHAR(1) NULL,
   PRIMARY KEY (`username`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;

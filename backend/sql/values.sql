@@ -7,8 +7,6 @@ INSERT INTO `request` (`reqNumber`, `role`, `reqname`, `email`, `restaurant`, `a
 (6, 'Kunde', 'Schmidt', 'schmidt@gmx.de', '-', '-', 'Wann wird der McDonalds Ravensburg hinzugefügt?'),
 (7, 'Kunde', 'Wolfgang Kimpfler', 'info@ochsen-rv.de', '-', '-', 'balafioewnfüo');
 
------------------------------------------------------------
-
 INSERT INTO `reservation` (`resNumber`, `restaurant`, `resName`, `resDate`, `resTime`, `amountPers`) VALUES
 (1, 'QMUH Ravensburg', 'Schilling', '2019-12-26', '11:30:00', 4),
 (2, 'QMUH Ravensburg', 'Müller', '2019-11-13', '09:10:00', 15),
@@ -75,8 +73,6 @@ INSERT INTO `reservation` (`resNumber`, `restaurant`, `resName`, `resDate`, `res
 (63, 'Einstein', 'Peters', '2019-12-25', '14:00:00', 4),
 (64, 'lukullum', 'Bauer', '2019-12-26', '15:00:00', 6);
 
--- --------------------------------------------------------
-
 INSERT INTO `user` (`username`, `userpassword`, `admin`) VALUES
 ('admin', 'webpr2019', 'X'),
 ('Asia World', 'asiaworld123', ''),
@@ -95,46 +91,3 @@ INSERT INTO `user` (`username`, `userpassword`, `admin`) VALUES
 ('Spicy Grill', 'spicygrill123', ''),
 ('sWirtshaus', 'swirtshaus123', ''),
 ('Wirtshaus Mohren', 'mohren123', '');
-
---
--- Indizes der exportierten Tabellen
---
-
---
--- Indizes für die Tabelle `request`
---
-ALTER TABLE `request`
-  ADD PRIMARY KEY (`reqNumber`);
-
---
--- Indizes für die Tabelle `reservation`
---
-ALTER TABLE `reservation`
-  ADD PRIMARY KEY (`resNumber`);
-
---
--- Indizes für die Tabelle `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`username`);
-
---
--- AUTO_INCREMENT für exportierte Tabellen
---
-
---
--- AUTO_INCREMENT für Tabelle `request`
---
-ALTER TABLE `request`
-  MODIFY `reqNumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT für Tabelle `reservation`
---
-ALTER TABLE `reservation`
-  MODIFY `resNumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

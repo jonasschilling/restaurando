@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <title>Spicy Grill</title>
+	<title>Spicy Grill</title>
 
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="resources/css/stylesheet01.css" rel="stylesheet">
-    <link href="/resources/css/loginStyle.css" rel="stylesheet">
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+	<link href="resources/css/stylesheet01.css" rel="stylesheet">
+	<link href="/resources/css/loginStyle.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body style="background-color: #7F6E64" onload="changeLogin()">
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">restaurando</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+			<a class="navbar-brand" href="index.html">restaurando</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto" id="navbar-left-btns">
-                    <li class="nav-item active"><a class="nav-link" href="index.html">Home <span
-                                class="sr-only">(current)</span>
-                        </a></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Restaurants
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="restaurantsRV.html">Restaurants
-                                Ravensburg</a> <a class="dropdown-item" href="restaurantsFN.html">Restaurants
-                                Friedrichshafen</a> <a class="dropdown-item" href="restaurantsULM.html">Restaurants
-                                Ulm</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <button onclick="document.getElementById('id01').style.display='block'" style="width: auto;">
-                            <img src="/resources/img/login.png"> Login
-                        </button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto" id="navbar-left-btns">
+					<li class="nav-item active"><a class="nav-link" href="index.html">Home <span
+								class="sr-only">(current)</span>
+						</a></li>
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Restaurants
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="restaurantsRV.html">Restaurants
+								Ravensburg</a> <a class="dropdown-item" href="restaurantsFN.html">Restaurants
+								Friedrichshafen</a> <a class="dropdown-item" href="restaurantsULM.html">Restaurants
+								Ulm</a>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<button onclick="document.getElementById('id01').style.display='block'" style="width: auto;">
+							<img src="/resources/img/login.png"> Login
+						</button>
 
-                    </li>
-                </ul>
-            </div>
-        </nav>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
 		<div id="id01" class="modal">
 			<form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
@@ -63,14 +64,14 @@
 
 				<div class="container">
 					<label for="type"><b>Rolle</b></label>
-					<select required id="type" class="contact-text-input" name="type" onchange="changeLogin()">
+					<select required id="typeLogin" class="contact-text-input" name="type" onchange="changeLogin()">
 						<option value="0">Rolle auswählen</option>
 						<option value="1">Administrator</option>
 						<option value="2">Restaurantbesitzer</option>
 					</select>
-					<label id="namelabel" for="usernameinput"><b>Benutzername</b></label>
-					<input id="username" type="text" placeholder="Name eingeben" name="usernameinput" maxlength="50"
-						required>
+					<label id="namelabelLogin" for="usernameinput"><b>Benutzername</b></label>
+					<input id="usernameLogin" type="text" placeholder="Name eingeben" name="usernameinput"
+						maxlength="50" required>
 					<br>
 					<label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
 					<input id="pw" type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30"
@@ -81,51 +82,52 @@
 				</div>
 			</form>
 		</div>
-        
-    <div class="jumbotron text-center" id="jumbotronspicygrill">
-        <div id="titletext">
-            <h1>Spicy Grill</h1>
-            <p>Reservieren Sie Ihren Tisch bei Spicy Grill Friedrichshafen - gleich
-                hier!</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>Kategorien</h3>
-                <p>Burger, Steaks</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Was?</h3>
-                <p>Das Restaurant mit hohen Fenstern und dunklem Holz serviert mediterrane Grillgerichte, Burger und Steaks.</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Wo?</h3>
-                <p>Zeppelinstraße 110</p>
-                <p>88045 Friedrichshafen</p>
-            </div>
-        </div>
-    </div>
-    <div class="container" id="reserve">
-            <form action="/backend/addreservation.php" method="POST">
-                <h2 align="center">Reservierung bei Spicy Grill Taverne Friedrichshafen</h2>
-                <input name="restaurant" hidden value="Spicy Grill">
-                <div class="row">
+
+		<div class="jumbotron text-center" id="jumbotronspicygrill">
+			<div id="titletext">
+				<h1>Spicy Grill</h1>
+				<p>Reservieren Sie Ihren Tisch bei Spicy Grill Friedrichshafen - gleich
+					hier!</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<h3>Kategorien</h3>
+					<p>Burger, Steaks</p>
+				</div>
+				<div class="col-sm-4">
+					<h3>Was?</h3>
+					<p>Das Restaurant mit hohen Fenstern und dunklem Holz serviert mediterrane Grillgerichte, Burger und
+						Steaks.</p>
+				</div>
+				<div class="col-sm-4">
+					<h3>Wo?</h3>
+					<p>Zeppelinstraße 110</p>
+					<p>88045 Friedrichshafen</p>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="reserve">
+			<form action="/backend/addreservation.php" method="POST">
+				<h2 align="center">Reservierung bei Spicy Grill Taverne Friedrichshafen</h2>
+				<input name="restaurant" hidden value="Spicy Grill">
+				<div class="row">
 					<div class="col-sm-4" align="center">
 						<h3>Datum auswählen:</h3>
 						<img src="https://img.icons8.com/metro/26/000000/calendar.png">
 						<br>
 						<br>
-						<input style="text-align:center" class="reservation" type="date" id="date" min="2019-11-13" max="2020-12-31" required
-							name="dateinput">
+						<input style="text-align:center" class="reservation" type="date" id="date" min="2019-11-13"
+							max="2020-12-31" required name="dateinput">
 					</div>
 					<div class="col-sm-4" align="center">
 						<h3>Uhrzeit auswählen:</h3>
 						<img src="https://img.icons8.com/metro/26/000000/clock.png">
 						<br>
 						<br>
-						<input style="text-align:center" class="reservation" type="time" id="time" min="09:00" max="23:00" required
-							name="timeinput">
+						<input style="text-align:center" class="reservation" type="time" id="time" min="09:00"
+							max="23:00" required name="timeinput">
 					</div>
 					<div class="col-sm-4" align="center">
 						<h3>Anzahl Personen:</h3>

@@ -65,9 +65,9 @@ function changeFields() {
 }
 
 function setTypeValue() {
-	if (document.getElementById("typeLogin").value == 2) {
+	if (document.getElementById("type").value == 2) {
 		document.getElementById("typeinput").value = '2';
-	} else if (document.getElementById("typeLogin").value == 1) {
+	} else if (document.getElementById("type").value == 1) {
 		document.getElementById("typeinput").value = '1';
 		document.getElementById("restName").value = '-';
 		document.getElementById("restAdress").value = '-';

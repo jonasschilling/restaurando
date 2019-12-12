@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+
     <title>Restaurants Friedrichshafen</title>
 
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -55,33 +55,33 @@
         </nav>
 
         <div id="id01" class="modal">
-			<form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
-				<div class="imgcontainer">
-					<span onclick="document.getElementById('id01').style.display='none'" class="close"
-						title="Close Modal">&times;</span>
-					<img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
-				</div>
+            <form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
+                </div>
 
-				<div class="container">
-					<label for="type"><b>Rolle</b></label>
-					<select required id="type" class="contact-text-input" name="type" onchange="changeLogin()">
-						<option value="0">Rolle auswählen</option>
-						<option value="1">Administrator</option>
-						<option value="2">Restaurantbesitzer</option>
-					</select>
-					<label id="namelabel" for="usernameinput"><b>Benutzername</b></label>
-					<input id="username" type="text" placeholder="Name eingeben" name="usernameinput" maxlength="50"
-						required>
-					<br>
-					<label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
-					<input id="pw" type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30"
-						required>
-					<br>
-					<button type="submit">Login</button>
-					<script src="/resources/js/login.js"></script>
-				</div>
-			</form>
-		</div>
+                <div class="container">
+                    <label for="type"><b>Rolle</b></label>
+                    <select required id="typeLogin" class="contact-text-input" name="type" onchange="changeLogin()">
+                        <option value="0">Rolle auswählen</option>
+                        <option value="1">Administrator</option>
+                        <option value="2">Restaurantbesitzer</option>
+                    </select>
+                    <label id="namelabelLogin" for="usernameinput"><b>Benutzername</b></label>
+                    <input id="usernameLogin" type="text" placeholder="Name eingeben" name="usernameinput"
+                        maxlength="50" required>
+                    <br>
+                    <label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
+                    <input id="pw" type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30"
+                        required>
+                    <br>
+                    <button type="submit">Login</button>
+                    <script src="/resources/js/login.js"></script>
+                </div>
+            </form>
+        </div>
 
         <div class="jumbotron text-center" id="jumbotronIndex2">
             <div id="titletext">
@@ -91,57 +91,57 @@
         </div>
 
         <div class="row">
-                <a href="bellavista.html">
-                    <div class="card" style="width: 18rem">
-                        <img class="card-img-top" src="./resources/img/Bellavista.jpg" alt="Card image cap">
-                        <div class="card-body" align="center">
-                            <p class="card-text">Bella Vista Friedrichshafen</p>
-                            <a href="bellavista.html#reserve" class="card-button">Zur
-                                Reservierung</a>
-                        </div>
+            <a href="bellavista.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/Bellavista.jpg" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">Bella Vista Friedrichshafen</p>
+                        <a href="bellavista.html#reserve" class="card-button">Zur
+                            Reservierung</a>
                     </div>
-                </a>
-                <a href="lukullum.html">
-                    <div class="card" style="width: 18rem">
-                        <img class="card-img-top" src="./resources/img/Lukullum.jpg" alt="Card image cap">
-                        <div class="card-body" align="center">
-                            <p class="card-text">Lukullum Friedrichshafen</p>
-                            <a href="lukullum.html#reserve" class="card-button">Zur
-                                Reservierung</a>
-                        </div>
+                </div>
+            </a>
+            <a href="lukullum.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/Lukullum.jpg" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">Lukullum Friedrichshafen</p>
+                        <a href="lukullum.html#reserve" class="card-button">Zur
+                            Reservierung</a>
                     </div>
-                </a>
-                <a href="s'wirtshaus.html">
-                    <div class="card" style="width: 18rem">
-                        <img class="card-img-top" src="./resources/img/s'Wirtshaus.png" alt="Card image cap">
-                        <div class="card-body" align="center">
-                            <p class="card-text">s'Wirtshaus am See</p>
-                            <a href="s'wirtshaus.html#reserve" class="card-button">Zur
-                                Reservierung</a>
-                        </div>
+                </div>
+            </a>
+            <a href="s'wirtshaus.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/s'Wirtshaus.png" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">s'Wirtshaus am See</p>
+                        <a href="s'wirtshaus.html#reserve" class="card-button">Zur
+                            Reservierung</a>
                     </div>
-                </a>
-                <a href="asiaworld.html">
-                    <div class="card" style="width: 18rem">
-                        <img class="card-img-top" src="./resources/img/AsiaWorld.png" alt="Card image cap">
-                        <div class="card-body" align="center">
-                            <p class="card-text">Asia World Friedrichshafen</p>
-                            <a href="asiaworld.html#reserve" class="card-button">Zur
-                                Reservierung</a>
-                        </div>
+                </div>
+            </a>
+            <a href="asiaworld.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/AsiaWorld.png" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">Asia World Friedrichshafen</p>
+                        <a href="asiaworld.html#reserve" class="card-button">Zur
+                            Reservierung</a>
                     </div>
-                </a>
-                <a href="spicygrill.html">
-                    <div class="card" style="width: 18rem">
-                        <img class="card-img-top" src="./resources/img/spicygrill.png" alt="Card image cap">
-                        <div class="card-body" align="center">
-                            <p class="card-text">Spicy Grill Taverne</p>
-                            <a href="spicygrill.html#reserve" class="card-button">Zur
-                                Reservierung</a>
-                        </div>
+                </div>
+            </a>
+            <a href="spicygrill.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/spicygrill.png" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">Spicy Grill Taverne</p>
+                        <a href="spicygrill.html#reserve" class="card-button">Zur
+                            Reservierung</a>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
+        </div>
     </header>
 </body>
 

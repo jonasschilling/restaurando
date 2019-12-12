@@ -55,33 +55,33 @@
         </nav>
 
         <div id="id01" class="modal">
-            <form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
-                <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                        title="Close Modal">&times;</span>
-                    <img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
-                </div>
+			<form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close"
+						title="Close Modal">&times;</span>
+					<img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
+				</div>
 
-                <div class="container">
-                    <label for="type"><b>Rolle</b></label>
-                    <select required id="type" class="contact-text-input" name="type" onchange="changeLogin()">
-                        <option value="0">Rolle auswählen</option>
-                        <option value="1">Administrator</option>
-                        <option value="2">Restaurantbesitzer</option>
-                    </select>
-                    <label id="namelabel" for="usernameinput"><b>Benutzername</b></label>
-                    <input id="username" type="text" placeholder="Name eingeben" name="usernameinput" maxlength="50"
-                        required>
-                    <br>
-                    <label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
-                    <input id="pw" type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30"
-                        required>
-                    <br>
-                    <button type="submit">Login</button>
-                    <script src="/resources/js/login.js"></script>
-                </div>
-            </form>
-        </div>
+				<div class="container">
+					<label for="type"><b>Rolle</b></label>
+					<select required id="typeLogin" class="contact-text-input" name="type" onchange="changeLogin()">
+						<option value="0">Rolle auswählen</option>
+						<option value="1">Administrator</option>
+						<option value="2">Restaurantbesitzer</option>
+					</select>
+					<label id="namelabelLogin" for="usernameinput"><b>Benutzername</b></label>
+					<input id="usernameLogin" type="text" placeholder="Name eingeben" name="usernameinput" maxlength="50"
+						required>
+					<br>
+					<label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
+					<input id="pw" type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30"
+						required>
+					<br>
+					<button type="submit">Login</button>
+					<script src="/resources/js/login.js"></script>
+				</div>
+			</form>
+		</div>
 
         <div class="jumbotron text-center" id="jumbotroneinstein">
             <div id="titletext">

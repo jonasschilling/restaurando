@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <meta charset="utf-8">
@@ -7,18 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+
     <title>Restaurants Ravensburg</title>
 
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="resources/css/stylesheet01.css" rel="stylesheet">
     <link href="/resources/css/loginStyle.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body style="background-color: #7F6E64" onload="changeLogin()">
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="index.html">restaurando</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,99 +54,96 @@
             </div>
         </nav>
 
-		<div id="id01" class="modal">
-			<form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
-				<div class="imgcontainer">
-					<span onclick="document.getElementById('id01').style.display='none'" class="close"
-						title="Close Modal">&times;</span>
-					<img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
-				</div>
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
+                </div>
 
-				<div class="container">
-					<label for="type"><b>Rolle</b></label>
-					<select required id="type" class="contact-text-input" name="type" onchange="changeLogin()">
-						<option value="0">Rolle auswählen</option>
-						<option value="1">Administrator</option>
-						<option value="2">Restaurantbesitzer</option>
-					</select>
-					<label id="namelabel" for="usernameinput"><b>Benutzername</b></label>
-					<input id="username" type="text" placeholder="Name eingeben" name="usernameinput" maxlength="50"
-						required>
-					<br>
-					<label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
-					<input id="pw" type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30"
-						required>
-					<br>
-					<button type="submit">Login</button>
-					<script src="/resources/js/login.js"></script>
-				</div>
-			</form>
-		</div>
-        
-    <div class="jumbotron text-center" id="jumbotronIndex2">
-        <div id="titletext">
-            <h1>Restaurants in Ravensburg</h1>
-            <p>Wählen Sie Ihr Lieblingsrestaurant und reservieren Sie gleich hier!</p>
+                <div class="container">
+                    <label for="type"><b>Rolle</b></label>
+                    <select required id="typeLogin" class="contact-text-input" name="type" onchange="changeLogin()">
+                        <option value="0">Rolle auswählen</option>
+                        <option value="1">Administrator</option>
+                        <option value="2">Restaurantbesitzer</option>
+                    </select>
+                    <label id="namelabelLogin" for="usernameinput"><b>Benutzername</b></label>
+                    <input id="usernameLogin" type="text" placeholder="Name eingeben" name="usernameinput"
+                        maxlength="50" required>
+                    <br>
+                    <label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
+                    <input id="pw" type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30"
+                        required>
+                    <br>
+                    <button type="submit">Login</button>
+                    <script src="/resources/js/login.js"></script>
+                </div>
+            </form>
         </div>
-    </div>
 
-    <div class="row">
-        <a href="qmuh.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/qmuh.png" alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">QMUH Ravensburg</p>
-                    <a href="qmuh.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
+        <div class="jumbotron text-center" id="jumbotronIndex2">
+            <div id="titletext">
+                <h1>Restaurants in Ravensburg</h1>
+                <p>Wählen Sie Ihr Lieblingsrestaurant und reservieren Sie gleich hier!</p>
             </div>
-        </a>
-        <a href="mohren.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/mohren4.jpg"
-                     alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">Wirtshaus Mohren</p>
-                    <a href="mohren.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
-            </div>
-        </a>
-        <a href="Ilpodio.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/IL_podio.jpg"
-                     alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">Il Podio Ravensburg</p>
-                    <a href="Ilpodio.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
-            </div>
-        </a>
-        <a href="asienpalast.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/AsienPalast.jpg"
-                     alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">Asien Palast Ravensburg</p>
-                    <a href="asienpalast.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
-            </div>
-        </a>
-        <a href="gleis9.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/Gleis9.jpg"
-                     alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">Gleis 9 Ravensburg</p>
-                    <a href="gleis9.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
-            </div>
-        </a>
+        </div>
 
-    </div>
-</header>
+        <div class="row">
+            <a href="qmuh.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/qmuh.png" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">QMUH Ravensburg</p>
+                        <a href="qmuh.html#reserve" class="card-button">Zur
+                            Reservierung</a>
+                    </div>
+                </div>
+            </a>
+            <a href="mohren.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/mohren4.jpg" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">Wirtshaus Mohren</p>
+                        <a href="mohren.html#reserve" class="card-button">Zur
+                            Reservierung</a>
+                    </div>
+                </div>
+            </a>
+            <a href="Ilpodio.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/IL_podio.jpg" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">Il Podio Ravensburg</p>
+                        <a href="Ilpodio.html#reserve" class="card-button">Zur
+                            Reservierung</a>
+                    </div>
+                </div>
+            </a>
+            <a href="asienpalast.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/AsienPalast.jpg" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">Asien Palast Ravensburg</p>
+                        <a href="asienpalast.html#reserve" class="card-button">Zur
+                            Reservierung</a>
+                    </div>
+                </div>
+            </a>
+            <a href="gleis9.html">
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="./resources/img/Gleis9.jpg" alt="Card image cap">
+                    <div class="card-body" align="center">
+                        <p class="card-text">Gleis 9 Ravensburg</p>
+                        <a href="gleis9.html#reserve" class="card-button">Zur
+                            Reservierung</a>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </header>
 </body>
+
 </html>

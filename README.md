@@ -16,6 +16,7 @@ The web-application uses the following technology stack:
 #####Vorbedingungen und Installation
 Die folgenden Vorbedingungen werden benötigt um die Website erfolgreich zum Laufen zu bringen:
 
+
 1. 	xampp installieren
 2. 	Apache und MySQL-Server über xampp Control Panel starten
 3.	Backend vorbereiten

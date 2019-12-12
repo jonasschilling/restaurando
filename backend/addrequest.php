@@ -30,7 +30,7 @@
 		}else{
 			?>
 			<body style="background-color: #7F6E64">
-				<link href="../css/stylesheet01.css" rel="stylesheet">
+				<link href="../resources/css/stylesheet01.css" rel="stylesheet">
 				<div align="center" valign="middle">
 					<?php
 						echo 'Ihr Anliegen wurde erfolgreich &uuml;bermittelt. Wir werden uns schnellstm&ouml;glich darum k&uuml;mmern.';

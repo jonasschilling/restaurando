@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <meta charset="utf-8">
@@ -8,139 +9,126 @@
     <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
     <title>Restaurants Friedrichshafen</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
-    <link href="resources/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="resources/css/bootstrap.css" rel="stylesheet">
-    <link href="resources/css/bootstrap.css.map" rel="stylesheet">
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="resources/css/stylesheet01.css" rel="stylesheet">
     <link href="/resources/css/loginStyle.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body style="background-color: #7F6E64">
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="d-flex flex-grow-1">
-				<span class="w-100 d-lg-none d-block">
-					<!-- hidden spacer to center brand on mobile -->
-				</span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
-					restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-					restaurando
-				</a>
-				<div class="w-100 text-right">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				</div>
-			</div>
-			<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-				<ul class="navbar-nav ml-auto flex-nowrap">
-					<li class="nav-item"><a href="index.html" class="nav-link m-2 menu-item nav-active">Home</a></li>
-					<li class="nav-item"><a href="restaurantsFN.html" class="nav-link m-2 menu-item">Restaurants</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img
-								src="/resources/img/login.png"> Login</button>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block">
+                    <!-- hidden spacer to center brand on mobile -->
+                </span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+                    restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+                    restaurando
+                </a>
+                <div class="w-100 text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item"><a href="index.html" class="nav-link m-2 menu-item nav-active">Home</a></li>
+                    <li class="nav-item"><a href="restaurantsFN.html" class="nav-link m-2 menu-item">Restaurants</a>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img
+                                src="/resources/img/login.png"> Login</button>
 
-					</li>
-				</ul>
-			</div>
-		</nav>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-		<div id="id01" class="modal">
-			<form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
-				<div class="imgcontainer">
-					<span onclick="document.getElementById('id01').style.display='none'" class="close"
-						title="Close Modal">&times;</span>
-					<img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
-				</div>
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
+                </div>
 
-				<div class="container">
-					<label for="usernameinput"><b>Benutzername</b></label>
-					<input type="text" placeholder="Benutzernamen eingeben" name="usernameinput" maxlength="50"
-						required>
-					<br>
-					<label for="passwordinput"><b>Passwort</b></label>
-					<input type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30" required>
-					<br>
-					<button type="submit">Login</button>
-				</div>
-			</form>
+                <div class="container">
+                    <label for="usernameinput"><b>Benutzername</b></label>
+                    <input type="text" placeholder="Benutzernamen eingeben" name="usernameinput" maxlength="50"
+                        required>
+                    <br>
+                    <label for="passwordinput"><b>Passwort</b></label>
+                    <input type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30" required>
+                    <br>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
         </div>
-        
-    <div class="jumbotron text-center" id="jumbotronIndex2">
-        <div id="titletext">
-            <h1>Restaurants in Friedrichshafen</h1>
-            <p>Wählen Sie Ihr Lieblingsrestaurant und reservieren Sie gleich hier!</p>
+
+        <div class="jumbotron text-center" id="jumbotronIndex2">
+            <div id="titletext">
+                <h1>Restaurants in Friedrichshafen</h1>
+                <p>Wählen Sie Ihr Lieblingsrestaurant und reservieren Sie gleich hier!</p>
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <a href="bellavista.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/Bellavista.jpg" alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">Bella Vista Friedrichshafen</p>
-                    <a href="bellavista.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
+        <div class="row">
+                <a href="bellavista.html">
+                    <div class="card" style="width: 18rem">
+                        <img class="card-img-top" src="./resources/img/Bellavista.jpg" alt="Card image cap">
+                        <div class="card-body" align="center">
+                            <p class="card-text">Bella Vista Friedrichshafen</p>
+                            <a href="bellavista.html#reserve" class="card-button">Zur
+                                Reservierung</a>
+                        </div>
+                    </div>
+                </a>
+                <a href="lukullum.html">
+                    <div class="card" style="width: 18rem">
+                        <img class="card-img-top" src="./resources/img/Lukullum.jpg" alt="Card image cap">
+                        <div class="card-body" align="center">
+                            <p class="card-text">Lukullum Friedrichshafen</p>
+                            <a href="lukullum.html#reserve" class="card-button">Zur
+                                Reservierung</a>
+                        </div>
+                    </div>
+                </a>
+                <a href="s'wirtshaus.html">
+                    <div class="card" style="width: 18rem">
+                        <img class="card-img-top" src="./resources/img/s'Wirtshaus.png" alt="Card image cap">
+                        <div class="card-body" align="center">
+                            <p class="card-text">s'Wirtshaus am See</p>
+                            <a href="s'wirtshaus.html#reserve" class="card-button">Zur
+                                Reservierung</a>
+                        </div>
+                    </div>
+                </a>
+                <a href="asiaworld.html">
+                    <div class="card" style="width: 18rem">
+                        <img class="card-img-top" src="./resources/img/AsiaWorld.png" alt="Card image cap">
+                        <div class="card-body" align="center">
+                            <p class="card-text">Asia World Friedrichshafen</p>
+                            <a href="asiaworld.html#reserve" class="card-button">Zur
+                                Reservierung</a>
+                        </div>
+                    </div>
+                </a>
+                <a href="spicygrill.html">
+                    <div class="card" style="width: 18rem">
+                        <img class="card-img-top" src="./resources/img/spicygrill.png" alt="Card image cap">
+                        <div class="card-body" align="center">
+                            <p class="card-text">Spicy Grill Taverne</p>
+                            <a href="spicygrill.html#reserve" class="card-button">Zur
+                                Reservierung</a>
+                        </div>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="lukullum.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/Lukullum.jpg"
-                     alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">Lukullum Friedrichshafen</p>
-                    <a href="lukullum.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
-            </div>
-        </a>
-        <a href="s'wirtshaus.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/s'Wirtshaus.png"
-                     alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">s'Wirtshaus am See</p>
-                    <a href="s'wirtshaus.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
-            </div>
-        </a>
-        <a href="asiaworld.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/AsiaWorld.png"
-                     alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">Asia World Friedrichshafen</p>
-                    <a href="asiaworld.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
-            </div>
-        </a>
-        <a href="spicygrill.html">
-            <div class="card" style="width: 18rem">
-                <img class="card-img-top" src="./resources/img/spicygrill.png"
-                     alt="Card image cap">
-                <div class="card-body" align="center">
-                    <p class="card-text">Spicy Grill Taverne</p>
-                    <a href="spicygrill.html#reserve" class="card-button">Zur
-                        Reservierung</a>
-                </div>
-            </div>
-        </a>
-
-    </div>
-</header>
-<script src="reservation.js"></script>
+    </header>
 </body>
+
 </html>

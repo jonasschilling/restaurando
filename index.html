@@ -6,7 +6,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 	<title>restaurando</title>
 
 	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -15,32 +17,37 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<body style="background-color: #7F6E64">
+<body style="background-color: #7F6E64" onload="changeLogin()">
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="d-flex flex-grow-1">
-				<span class="w-100 d-lg-none d-block">
-					<!-- hidden spacer to center brand on mobile -->
-				</span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
-					restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-					restaurando
-				</a>
-				<div class="w-100 text-right">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				</div>
-			</div>
-			<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-				<ul class="navbar-nav ml-auto flex-nowrap">
-					<li class="nav-item"><a href="#" class="nav-link m-2 menu-item nav-active">Home</a></li>
-					<li class="nav-item"><a href="restaurantsRV.html" class="nav-link m-2 menu-item">Restaurants</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
+			<a class="navbar-brand" href="index.html">restaurando</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto" id="navbar-left-btns">
+					<li class="nav-item active"><a class="nav-link" href="index.html">Home <span
+								class="sr-only">(current)</span>
+						</a></li>
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Restaurants
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="restaurantsRV.html">Restaurants
+								Ravensburg</a> <a class="dropdown-item" href="restaurantsFN.html">Restaurants
+								Friedrichshafen</a> <a class="dropdown-item" href="restaurantsULM.html">Restaurants
+								Ulm</a>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img
-								src="/resources/img/login.png"> Login</button>
+						<button onclick="document.getElementById('id01').style.display='block'" style="width: auto;">
+							<img src="/resources/img/login.png"> Login
+						</button>
 
 					</li>
 				</ul>
@@ -56,14 +63,22 @@
 				</div>
 
 				<div class="container">
-					<label for="usernameinput"><b>Benutzername</b></label>
-					<input type="text" placeholder="Benutzernamen eingeben" name="usernameinput" maxlength="50"
+					<label for="type"><b>Rolle</b></label>
+					<select required id="type" class="contact-text-input" name="type" onchange="changeLogin()">
+						<option value="0">Rolle auswählen</option>
+						<option value="1">Administrator</option>
+						<option value="2">Restaurantbesitzer</option>
+					</select>
+					<label id="namelabel" for="usernameinput"><b>Benutzername</b></label>
+					<input id="username" type="text" placeholder="Name eingeben" name="usernameinput" maxlength="50"
 						required>
 					<br>
-					<label for="passwordinput"><b>Passwort</b></label>
-					<input type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30" required>
+					<label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
+					<input id="pw" type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30"
+						required>
 					<br>
 					<button type="submit">Login</button>
+					<script src="/resources/js/login.js"></script>
 				</div>
 			</form>
 		</div>
@@ -82,9 +97,9 @@
 				<img class="card-img-top-index" src="resources/img/rav.jpg" alt="Ravensburg">
 				<div class="card-body">
 					<h3 class="card-title">Ravensburg</h3>
-					<p class="card-text"><small>It's a broader card with text below as a natural lead-in to extra
-							content. This content is a little longer.</small></p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					<p class="card-text"><small>Ravensburg ist die größte Stadt im südlichen Oberschwaben. Der
+							Marienplatz ist der ideale Ausgangspunkt, um die "Stadt der Türme und Tore"  und das
+							vielfältige Angebot an Restaurants und Cafés zu erkunden.</small></p>
 				</div>
 			</a>
 		</div>
@@ -92,10 +107,10 @@
 			<a href="restaurantsFN.html" class="cardAction">
 				<img class="card-img-top-index" src="resources/img/fn.jpg" alt="Friedrichshafen">
 				<div class="card-body">
-					<h3 class="card-title">Friedrichsahfen</h3>
-					<p class="card-text"><small> This card has supporting text below as a natural lead-in to additional
-							content.</small></p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					<h3 class="card-title">Friedrichshafen</h3>
+					<p class="card-text"><small>Friedrichshafen ist eine Stadt am Ufer des Bodensees. Das große
+							Kulturufer und die langgezogene, schöne Promenade bieten alles, was man wünscht- zahlreiche
+							Restaurants, Cafés und Bars, die Stadt zudem ein vielfältiges Einkaufsangebot.</small></p>
 				</div>
 			</a>
 		</div>
@@ -105,10 +120,9 @@
 				<img class="card-img-top-index" src="resources/img/ulm2.jpg" alt="Ulm">
 				<div class="card-body">
 					<h3 class="card-title">Ulm</h3>
-					<p class="card-text"><small>It's a broader card with text below as a natural lead-in to extra
-							content. This content is a little longer.This card has even longer content than the first to
-							show that equal height action.</small></p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					<p class="card-text"><small>Ulm ist eine mittelalterliche Stadt mit dem Münster in der Stadtmitte.
+							In Ulm können Sie eindrucksvolles Ambiente, verlockende Gerüche und wohlschmeckende
+							Gaumenfreuden genießen.</small></p>
 				</div>
 			</a>
 		</div>

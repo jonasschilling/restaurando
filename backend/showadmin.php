@@ -1,8 +1,8 @@
 <?php
 	require('sql.php');
 
-	$checkusername = @$_POST['uname'];
-	$checkpassword = @$_POST['pwd'];
+	$checkusername = @$_POST['uname1'];
+	$checkpassword = @$_POST['pwd1'];
 
 	if(!isset($checkusername) OR !isset($checkpassword)) {
 		?>
@@ -21,6 +21,11 @@
 		$sqlreqrest = "SELECT reqname, email, restaurant, adress, request FROM request WHERE role='Restaurantbesitzer'";
 		$sqlreqcust = "SELECT reqname, email, request FROM request WHERE role='Kunde'";
 
+		$sqlrescount = "SELECT COUNT(*) as amountRes FROM reservation WHERE resDate >= CurDate()";
+		$sqlreqrestcount = "SELECT COUNT(*) as amountReqRest FROM request WHERE role='Restaurantbesitzer'";
+		$sqlreqcustcount = "SELECT COUNT(*) as amountReqCust FROM request WHERE role='Kunde'";
+
+
 		if ($resultres = $conn->query($sqlres)) {
 			while ($singledatares = $resultres->fetch_object()) {
 				$datares[] = $singledatares;
@@ -37,6 +42,18 @@
 			while ($singledatareqcust = $resultreqcust->fetch_object()) {
 				$datareqcust[] = $singledatareqcust;
 			}
+		}
+
+		if ($resultcount1 = $conn->query($sqlrescount)) {
+			$result1 = $resultcount1->fetch_object();
+		}
+
+		if ($resultcount2 = $conn->query($sqlreqrestcount)) {
+			$result2 = $resultcount2->fetch_object();
+		}
+
+		if ($resultcount3 = $conn->query($sqlreqcustcount)) {
+			$result3 = $resultcount3->fetch_object();
 		}
 
 		?>
@@ -61,7 +78,7 @@
 					.tg .tg-il3a{color:#ffffff;border-color:#ffffff;text-align:left;vertical-align:top}
 					</style>
 					<div align="center">
-						<h2 style="color:#ffffff;">Alle Reservierungen</h2>
+						<h2 style="color:#ffffff;">Alle Reservierungen (<?php echo $result1->amountRes?>)</h2>
 						<br>
 						<table class="tg">
 							<thead>
@@ -116,7 +133,7 @@
 					.tg .tg-il3a{color:#ffffff;border-color:#ffffff;text-align:left;vertical-align:top}
 					</style>
 					<div align="center">
-						<h2 style="color:#ffffff;">Restaurant-Anfragen</h2>
+						<h2 style="color:#ffffff;">Restaurant-Anfragen (<?php echo $result2->amountReqRest?>)</h2>
 						<br>
 						<table class="tg">
 							<thead>
@@ -167,7 +184,7 @@
 					.tg .tg-il3a{color:#ffffff;border-color:#ffffff;text-align:left;vertical-align:top}
 					</style>
 					<div align="center">
-						<h2 style="color:#ffffff;">Kunden-Anfragen</h2>
+						<h2 style="color:#ffffff;">Kunden-Anfragen (<?php echo $result3->amountReqCust?>)</h2>
 						<br>
 						<table class="tg">
 							<thead>

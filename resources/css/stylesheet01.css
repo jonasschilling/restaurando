@@ -260,6 +260,13 @@ button {
 	margin-bottom: 5px;
 }
 
+@media screen and (max-width: 800px) {
+   .card-img-top-index {
+      height: 200px;
+      width: 100%;
+   }
+}
+
 /* If you don't want the footer to be responsive, remove these media queries */
 @media ( max-width : 880px) {
 	.footer-distributed {
@@ -293,6 +300,10 @@ button {
 .card-img-top-index {
 	height: 450px;
 	width: 100%;
+}
+
+#navbar-left-btns {
+	padding-top: 0.5%;
 }
 
 #jumbotronIndex2 {
@@ -4243,7 +4254,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
 .collapse {
-	display: none
+	display: none;
 }
 
 .collapse.in {

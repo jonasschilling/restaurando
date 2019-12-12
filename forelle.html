@@ -6,174 +6,190 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <title>Zur Forelle</title>
 
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="resources/css/stylesheet01.css" rel="stylesheet">
     <link href="/resources/css/loginStyle.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<body style="background-color: #7F6E64">
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="d-flex flex-grow-1">
-				<span class="w-100 d-lg-none d-block">
-					<!-- hidden spacer to center brand on mobile -->
-				</span> <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
-					restaurando </a> <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-					restaurando
-				</a>
-				<div class="w-100 text-right">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				</div>
-			</div>
-			<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-				<ul class="navbar-nav ml-auto flex-nowrap">
-					<li class="nav-item"><a href="index.html" class="nav-link m-2 menu-item nav-active">Home</a></li>
-					<li class="nav-item"><a href="restaurantsUlm.html" class="nav-link m-2 menu-item">Restaurants</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link m-2 menu-item">Kontakt</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img
-								src="/resources/img/login.png"> Login</button>
+<body style="background-color: #7F6E64" onload="changeLogin()">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">restaurando</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-					</li>
-				</ul>
-			</div>
-		</nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" id="navbar-left-btns">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home <span
+                                class="sr-only">(current)</span>
+                        </a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Restaurants
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="restaurantsRV.html">Restaurants
+                                Ravensburg</a> <a class="dropdown-item" href="restaurantsFN.html">Restaurants
+                                Friedrichshafen</a> <a class="dropdown-item" href="restaurantsULM.html">Restaurants
+                                Ulm</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button onclick="document.getElementById('id01').style.display='block'" style="width: auto;">
+                            <img src="/resources/img/login.png"> Login
+                        </button>
 
-		<div id="id01" class="modal">
-			<form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
-				<div class="imgcontainer">
-					<span onclick="document.getElementById('id01').style.display='none'" class="close"
-						title="Close Modal">&times;</span>
-					<img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
-				</div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-				<div class="container">
-					<label for="usernameinput"><b>Benutzername</b></label>
-					<input type="text" placeholder="Benutzernamen eingeben" name="usernameinput" maxlength="50"
-						required>
-					<br>
-					<label for="passwordinput"><b>Passwort</b></label>
-					<input type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30" required>
-					<br>
-					<button type="submit">Login</button>
-				</div>
-			</form>
-        </div>
-        
-    <div class="jumbotron text-center" id="jumbotronforelle">
-        <div id="titletext">
-            <h1>Zur Forelle Ulm</h1>
-            <p>Reservieren Sie Ihren Tisch bei Zur Forelle in Ulm - gleich
-                hier!</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>Kategorien</h3>
-                <p>schwäbisch, Fisch</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Was?</h3>
-                <p>Das 400 Jahre alte Lokal mit romantischer Terrasse bietet Forellen und Schwäbisches in holzvertäfelten Stuben.</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Wo?</h3>
-                <p>Fischergasse 25</p>
-                <p>89073 Ulm</p>
-            </div>
-        </div>
-    </div>
-    <div class="container" id="reserve">
-            <form action="/backend/addreservation.php" method="POST">
-                <h2 align="center">Reservierung bei Asia World Friedrichshafen</h2>
-                <input name="restaurant" hidden value="Asia World">
-                <div class="row">
-                    <div class="col-sm-4" align="center">
-                        <h3>Datum auswählen:</h3>
-                        <img src="https://img.icons8.com/metro/26/000000/calendar.png">
-                        <br>
-                        <br>
-                        <input class="reservation" type="date" id="date" min="2019-11-13" max="2020-12-31" required
-                            name="dateinput">
-                    </div>
-                    <div class="col-sm-4" align="center">
-                        <h3>Uhrzeit auswählen:</h3>
-                        <img src="https://img.icons8.com/metro/26/000000/clock.png">
-                        <br>
-                        <br>
-                        <input class="reservation" type="time" id="time" min="09:00" max="23:00" required
-                            name="timeinput">
-                    </div>
-                    <div class="col-sm-4" align="center">
-                        <h3>Anzahl Personen:</h3>
-                        <img src="https://img.icons8.com/ios-glyphs/26/000000/human-head.png">
-                        <br>
-                        <br>
-                        <input style="text-align:center" class="reservation" type="number" min="1" max="20" id="amount" required
-                            name="amountinput">
-                    </div>
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="../../../backend/checkuser.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="../../resources/img/user-icon-login-9.png" alt="Login" class="user">
                 </div>
-                <p>
+
+                <div class="container">
+                    <label for="type"><b>Rolle</b></label>
+                    <select required id="type" class="contact-text-input" name="type" onchange="changeLogin()">
+                        <option value="0">Rolle auswählen</option>
+                        <option value="1">Administrator</option>
+                        <option value="2">Restaurantbesitzer</option>
+                    </select>
+                    <label id="namelabel" for="usernameinput"><b>Benutzername</b></label>
+                    <input id="username" type="text" placeholder="Name eingeben" name="usernameinput" maxlength="50"
+                        required>
                     <br>
-                    <div style="text-align:center">
-                        <h3>Name:</h3>
-                        <img src="https://img.icons8.com/ios-glyphs/26/000000/human-head.png">
-                    </div>
-                    <input class="reservation" type="text" id="name" required name="nameinput">
-                </p>
-                <p>
-                    <p text-align="center">
-                        <button class="button" href="#" role="button" id="buttonReservation" type="submit">Reservierung
-                            absenden</button>
-                    </p>
-                </p>
+                    <label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
+                    <input id="pw" type="password" placeholder="Passwort eingeben" name="passwordinput" maxlength="30"
+                        required>
+                    <br>
+                    <button type="submit">Login</button>
+                    <script src="/resources/js/login.js"></script>
+                </div>
             </form>
         </div>
-    </header>
+
+        <div class="jumbotron text-center" id="jumbotronforelle">
+            <div id="titletext">
+                <h1>Zur Forelle Ulm</h1>
+                <p>Reservieren Sie Ihren Tisch bei Zur Forelle in Ulm - gleich
+                    hier!</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Kategorien</h3>
+                    <p>schwäbisch, Fisch</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Was?</h3>
+                    <p>Das 400 Jahre alte Lokal mit romantischer Terrasse bietet Forellen und Schwäbisches in
+                        holzvertäfelten Stuben.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Wo?</h3>
+                    <p>Fischergasse 25</p>
+                    <p>89073 Ulm</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="reserve">
+            <form action="/backend/addreservation.php" method="POST">
+                <h2 align="center">Reservierung bei Zur Forelle Ulm</h2>
+                <input name="restaurant" hidden value="Forelle">
+                <div class="row">
+					<div class="col-sm-4" align="center">
+						<h3>Datum auswählen:</h3>
+						<img src="https://img.icons8.com/metro/26/000000/calendar.png">
+						<br>
+						<br>
+						<input style="text-align:center" class="reservation" type="date" id="date" min="2019-11-13" max="2020-12-31" required
+							name="dateinput">
+					</div>
+					<div class="col-sm-4" align="center">
+						<h3>Uhrzeit auswählen:</h3>
+						<img src="https://img.icons8.com/metro/26/000000/clock.png">
+						<br>
+						<br>
+						<input style="text-align:center" class="reservation" type="time" id="time" min="09:00" max="23:00" required
+							name="timeinput">
+					</div>
+					<div class="col-sm-4" align="center">
+						<h3>Anzahl Personen:</h3>
+						<img src="https://img.icons8.com/ios-glyphs/26/000000/human-head.png">
+						<br>
+						<br>
+						<input style="text-align:center" class="reservation" type="number" min="1" max="20" id="amount"
+							required name="amountinput">
+					</div>
+				</div>
+				<p>
+					<br>
+					<div style="text-align:center">
+						<h3>Name:</h3>
+						<img src="https://img.icons8.com/ios-glyphs/26/000000/human-head.png">
+					</div>
+					<input class="reservation" type="text" id="name" required name="nameinput">
+				</p>
+				<p>
+					<p text-align="center">
+						<button class="button" href="#" role="button" id="buttonReservation" type="submit">Reservierung
+							absenden</button>
+					</p>
+				</p>
+			</form>
+		</div>
+	</header>
 </body>
 <footer class="footer-distributed">
-    <div class="footer-left">
-        <h3>
-            <span>Restaurando</span>
-        </h3>
-        <p class="footer-links">
-            <a href="index.html" class="link-1">Home</a> <a href="restaurantsFN.html">Restaurants</a> <a
-                href="contact.html">Kontakt</a>
-        </p>
-        <p class="footer-company-name">Restaurando © 2019</p>
-    </div>
-    <div class="footer-center">
-        <div>
-            <i class="fa fa-map-marker"></i>
-            <p>
-                <span>Georgstraße 13</span> Ravensburg, Deutschland
-            </p>
-        </div>
-        <div>
-            <i class="fa fa-phone"></i>
-            <p>+49 1575 444444</p>
-        </div>
-        <div>
-            <i class="fa fa-envelope"></i>
-            <p>
-                <a href="mailto:jonas.schilling@sap.com">support@restaurando.com</a>
-            </p>
-        </div>
-    </div>
-    <div class="footer-right">
-        <p class="footer-company-about">
-            <span>Über uns</span> Restaurando beste Firma der Welt mit der besten Homepage der Welt. REALTALK
-        </p>
-    </div>
+	<div class="footer-left">
+		<h3>
+			<span>Restaurando</span>
+		</h3>
+		<p class="footer-links">
+			<a href="index.html" class="link-1">Home</a> <a href="restaurantsFN.html">Restaurants</a> <a
+				href="contact.html">Kontakt</a>
+		</p>
+		<p class="footer-company-name">Restaurando © 2019</p>
+	</div>
+	<div class="footer-center">
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p>
+				<span>Georgstraße 13</span> Ravensburg, Deutschland
+			</p>
+		</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+49 1575 444444</p>
+		</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p>
+				<a href="mailto:jonas.schilling@sap.com">support@restaurando.com</a>
+			</p>
+		</div>
+	</div>
+	<div class="footer-right">
+		<p class="footer-company-about">
+			<span>Über uns</span> Restaurando beste Firma der Welt mit der besten Homepage der Welt. REALTALK
+		</p>
+	</div>
 </footer>
 
 </html>

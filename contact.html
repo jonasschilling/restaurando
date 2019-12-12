@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-	<!-- Required Meta Tags -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,7 +16,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="background-color: #7F6E64" onload="changeLogin()">
+<body style="background-color: #7F6E64" onload="onLoad()">
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand" href="index.html">restaurando</a>
@@ -64,13 +63,13 @@
 
 				<div class="container">
 					<label for="type"><b>Rolle</b></label>
-					<select required id="type" class="contact-text-input" name="type" onchange="changeLogin()">
+					<select required id="typeLogin" class="contact-text-input" name="type" onchange="changeLogin()">
 						<option value="0">Rolle auswählen</option>
 						<option value="1">Administrator</option>
 						<option value="2">Restaurantbesitzer</option>
 					</select>
-					<label id="namelabel" for="usernameinput"><b>Benutzername</b></label>
-					<input id="username" type="text" placeholder="Name eingeben" name="usernameinput" maxlength="50"
+					<label id="namelabelLogin" for="usernameinput"><b>Benutzername</b></label>
+					<input id="usernameLogin" type="text" placeholder="Name eingeben" name="usernameinput" maxlength="50"
 						required>
 					<br>
 					<label id="pwlabel" for="passwordinput"><b>Passwort</b></label>
@@ -78,7 +77,7 @@
 						required>
 					<br>
 					<button type="submit">Login</button>
-					<script src="/resources/js/login.js"></script>
+					<!-- <script src="/resources/js/login.js"></script> -->
 				</div>
 			</form>
 		</div>
@@ -93,50 +92,12 @@
 		<div class="container-contact">
 			<h2 align="center">Kontaktformular</h2>
 			<div class="select">
-				<select required id="type" class="contact-text-input" name="type" onchange="onChange()">
+				<select id="type" class="contact-text-input" name="type" onchange="changeFields()" required>
 					<option value="0">Rolle auswählen</option>
 					<option value="1">Kunde</option>
 					<option value="2">Restaurantbesitzer</option>
 				</select>
 			</div>
-			<script>
-				function onChange() {
-					if (document.getElementById("type").value == 2) {
-						document.getElementById("namelabel").style.display = '';
-						document.getElementById("name").style.display = '';
-						document.getElementById("emaillabel").style.display = '';
-						document.getElementById("email").style.display = '';
-						document.getElementById("restNameLabel").style.display = '';
-						document.getElementById("restName").style.display = '';
-						document.getElementById("restAdressLabel").style.display = '';
-						document.getElementById("restAdress").style.display = '';
-						document.getElementById("requestlabel").style.display = '';
-						document.getElementById("request").style.display = '';
-					} else if (document.getElementById("type").value == 1) {
-						document.getElementById("namelabel").style.display = '';
-						document.getElementById("name").style.display = '';
-						document.getElementById("emaillabel").style.display = '';
-						document.getElementById("email").style.display = '';
-						document.getElementById("restNameLabel").style.display = 'none';
-						document.getElementById("restName").style.display = 'none';
-						document.getElementById("restAdressLabel").style.display = 'none';
-						document.getElementById("restAdress").style.display = 'none';
-						document.getElementById("requestlabel").style.display = '';
-						document.getElementById("request").style.display = '';
-					} else {
-						document.getElementById("namelabel").style.display = 'none';
-						document.getElementById("name").style.display = 'none';
-						document.getElementById("emaillabel").style.display = 'none';
-						document.getElementById("email").style.display = 'none';
-						document.getElementById("restNameLabel").style.display = 'none';
-						document.getElementById("restName").style.display = 'none';
-						document.getElementById("restAdressLabel").style.display = 'none';
-						document.getElementById("restAdress").style.display = 'none';
-						document.getElementById("requestlabel").style.display = 'none';
-						document.getElementById("request").style.display = 'none';
-					}
-				}
-			</script>
 
 			<form action="/backend/addrequest.php" method="POST">
 				<input hidden id="typeinput" type="text" name="typeinput" value="0">
@@ -163,24 +124,14 @@
 					style="width:100%; height: 10em" required></textarea>
 				<p align="center">
 					<button class="button" href="#" role="button" id="buttonSubmit" type="submit"
-						onclick="setTypeValue();">Anliegen
+						onclick="setTypeValue()">Anliegen
 						abschicken</button>
-					<script>
-						function setTypeValue() {
-							if (document.getElementById("type").value == 2) {
-								document.getElementById("typeinput").value = '2';
-							} else if (document.getElementById("type").value == 1) {
-								document.getElementById("typeinput").value = '1';
-								document.getElementById("restName").value = '-';
-								document.getElementById("restAdress").value = '-';
-							}
-						}
-					</script>
 				</p>
 			</form>
 		</div>
 	</header>
 </body>
+<script src="/resources/js/login.js"></script>
 <footer class="footer-distributed">
 	<div class="footer-left">
 		<h3>

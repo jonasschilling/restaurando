@@ -137,3 +137,11 @@ span.psw {
     }
 
 }
+
+@media screen and (max-width: 1450px) {
+    .container{
+        padding-left:10px;
+        padding-right:10px;
+        width:100%;
+    }
+}
